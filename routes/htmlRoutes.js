@@ -1,13 +1,16 @@
 //var db = require("../models");
 
 module.exports = function(app) {
-  // Load index page
   app.get("/tutors", function(req, res) {
     res.render("tutors");
   });
 
   app.get("/students", function(req, res) {
     res.render("students");
+  });
+
+  app.get("update", function(req, res) {
+    res.render("update");
   });
 
   app.get("*", function(req, res) {
