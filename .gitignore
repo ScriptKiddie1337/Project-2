@@ -2,4 +2,8 @@
 node_modules
 npm-debug.log
 .env
+<<<<<<< HEAD
 config.json
+=======
+config
+>>>>>>> 13366b70163ebd2410a664a4bb7631118e7b10e8
