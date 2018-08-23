@@ -8,8 +8,8 @@ module.exports = function(app) {
 
   app.get("/students", function(req, res) {
     res.render("students");
-  }); 
-
+  });
+  
   app.get("*", function(req, res) {
     res.render("index");
   });
