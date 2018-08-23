@@ -8,9 +8,10 @@ module.exports = function(app) {
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
+  // Create a Tutor Posting
+  app.post("/api/createpost", function(req, res) {
+    /*db.TutorPost.create(req.body).then(function(results))*/
+    db.Example.create(req.body).then(function() {
       res.json(dbExample);
     });
   });
