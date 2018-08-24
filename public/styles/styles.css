@@ -1,13 +1,58 @@
-/* .list-group-item {
-  line-height: 2.5;
-}
- */
- .container {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+/* Default */
+* {
+  margin: 0;
 }
 
-main {
-  flex: 1 0 auto;
+/* Creates a sticky footer */
+ .wrapper {
+  min-height: calc(100vh - 50px);
+  /* max-width: 2560px;
+  width: 100%;
+  margin: 0; */
+}
+/* ---------------- */
+
+/* Header */
+.header {
+  background-color: blue;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+/* Main Content */
+.main {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+#tutorPortal,
+#studentPortal {
+  text-align: center;
+  min-height: 400px;
+  line-height: 400px;
+  font-size: 3em;
+}
+
+#tutorPortal {
+  background-color: orange;
+}
+
+#studentPortal {
+  background-color: skyblue;
+}
+
+/* Footer */
+.footer {
+  background-color: blue;
+  text-align: center;
+  color: white;
+  height: 50px;
+  margin-bottom: 0;
+  line-height: 50px;
 }

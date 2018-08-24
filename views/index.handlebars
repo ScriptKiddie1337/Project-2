@@ -1,23 +1,28 @@
-<div class="container">
+<div class="wrapper">
   {{!-- Header --}}
   <div class="header">
     <h1 class="title">Tutorific</h1>
-    <h3 class="sub-title">Learn. Teach. Get Paid.</h3>
+    <h4 class="sub-title">Learn. Teach. Get Paid.</h4>
   </div>
   {{!-- Body --}}
-  <div class="row">
-    <div class="col s6 m6">
-      <div class="card-panel teal">
-        <span class="white-text">Tutor Portal
-        </span>
-      </div>
+  <div class="row main">
+    {{!-- Tutor Card Panel --}}
+    <div class="col s4 offset-s1">
+      <a href="/tutors">
+        <div class="card-panel" id="tutorPortal">
+          <span class="white-text">Tutor Portal
+          </span>
+        </div>
+      </a>
     </div>
-
-    <div class="col s6 m6">
-      <div class="card-panel teal">
-        <span class="white-text">Student Portal
-        </span>
-      </div>
+  {{!-- Student Card Panel --}}
+    <div class="col s4 offset-s1 push-s1">
+      <a href="/students">
+        <div class="card-panel" id="studentPortal">
+          <span class="white-text">Student Portal
+          </span>
+        </div>
+      </a>
     </div>
   </div>
 </div>
