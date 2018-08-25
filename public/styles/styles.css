@@ -19,6 +19,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   color: white;
+  min-height: 200px;
 }
 
 h1 {
@@ -31,6 +32,7 @@ h1 {
   margin-bottom: 0;
 }
 
+/* Index Content */
 #tutorPortal,
 #studentPortal {
   text-align: center;
@@ -49,10 +51,60 @@ h1 {
 
 /* Footer */
 .footer {
+  position: fixed;
   background-color: blue;
   text-align: center;
   color: white;
   height: 50px;
   margin-bottom: 0;
   line-height: 50px;
+  width: 100%;
 }
+
+/* Students page */
+
+/* Header */
+.input-autocomplete {
+  margin-top: 40px;
+}
+
+/* Body */
+.student-body {
+  min-height: 800px;
+}
+
+.tutor-card {
+  margin-top: 20px;
+}
+
+.tutor-img-fix {
+  padding-left: 25px;
+}
+
+.sidebar-margin {
+  padding-top: 20px;
+}
+
+.button-fix {
+  margin-bottom: 15px;
+}
+
+.ad-margin {
+  margin-top: 20px;
+}
+
+.listing-scroll {
+  overflow-y: scroll;
+  height: 600px;
+  vertical-align: middle;
+}
+
+/* Footer */
+.footer-fix {
+  margin-bottom: 0px;
+}
+
+.page-footer {
+  background-color: blue; 
+}
+

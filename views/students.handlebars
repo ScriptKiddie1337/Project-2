@@ -1,13 +1,274 @@
- <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+<div class="wrapper">
+  {{!-- Header With Search--}}
+  <div class="header">
+    <div class="row">
+        <div class="col s12">
+          <div class="row">
+            <div class="input-field input-autocomplete col offset-s3 s6">
+              <i class="material-icons prefix">textsms</i>
+              <input type="text" id="autocomplete-input" class="autocomplete">
+              <label for="autocomplete-input">Search Tutors</label>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  {{!-- Body --}}
+  <div class="row">
+    {{!-- Left Sidebar --}}
+    <div class="col s2 white">
+      {{!-- Placeholder Tag Buttons --}}
+      <div class="row center sidebar-margin">
+        <a class="waves-effect waves-light red btn">Algebra</a>
+      </div>
+      <div class="row center">
+        <a class="waves-effect waves-light red btn">Algebra</a>
+      </div>
+      <div class="row center">
+        <a class="waves-effect waves-light red btn">Algebra</a>
+      </div>
+      <div class="row center">
+        <a class="waves-effect waves-light red btn">Algebra</a>
+      </div>
+      <div class="row center">
+        <a class="waves-effect waves-light red btn">Algebra</a>
+      </div>
+      <div class="row center">
+        <a class="waves-effect waves-light red btn">Algebra</a>
+      </div>
+      <div class="row center">
+        <a class="waves-effect waves-light red btn">Algebra</a>
+      </div>
+      <div class="row center">
+        <a class="waves-effect waves-light red btn">Algebra</a>
+      </div>
+      {{!-- Handlebars Tag Buttons --}}
+      <ul id="tag-list" class="list-group">
+        {{#each tag}}
+        <li data-id="{{this.tagid}}">
+          <button class="bt">{{this.tagName}}</button>
+        </li>
+        {{/each}}
       </ul>
     </div>
-  </nav>
+      {{!-- Tutor Listing Card --}}
+      <div class="col s8 white listing-scroll">
+        {{!-- Placeholder Card --}}
+        <a href="mailto:email@gmail.com">
+          <div class="card-panel tutor-card">
+            <div class="row tutor-img-fix">
+              <div class="col s4 center">
+                <img src="https://place-hold.it/50x50">
+                &nbsp
+                &nbsp
+                &nbsp
+                <span class="orange-text">Student Name</span>
+              </div>
+            </div>
+               <div class="row">
+                <div class="col offset-s1 s8 left">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae delectus inventore odio unde consequuntur ex, optio iusto itaque est sed a, sit voluptate! Sunt sint sapiente eaque, autem blanditiis tenetur!
+                  </p>
+                </div>
+                <div class="col s3">
+                  <h6>@Venmo-Name</h6>
+                </div>
+              </div>
+              <hr>
+                <div class="row tutor-card">
+                  <div class="col offset-s1 s8 left">
+                    <div class="row">
+                      <div class="col">
+                        <p>
+                          Amazing Reviews!
+                        </p>
+                        <p>
+                          -John Doe
+                        </p>
+                      </div>
+                      <div class="col">
+                        <p>
+                          Amazing Reviews!
+                        </p>
+                        <p>
+                          -John Doe
+                        </p>
+                      </div>
+                      <div class="col">
+                        <p>
+                          Amazing Reviews!
+                        </p>
+                        <p>
+                          -John Doe
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s3">
+                    <h6>40 Shmeckles a Minute</h6>
+                  </div>
+                </div>
+          </div>
+        </a>
+        <a href="mailto:email@gmail.com">
+          <div class="card-panel tutor-card">
+            <div class="row tutor-img-fix">
+              <div class="col s4 center">
+                <img src="https://place-hold.it/50x50">
+                &nbsp
+                &nbsp
+                &nbsp
+                <span class="orange-text">Student Name</span>
+              </div>
+            </div>
+               <div class="row">
+                <div class="col offset-s1 s8 left">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae delectus inventore odio unde consequuntur ex, optio iusto itaque est sed a, sit voluptate! Sunt sint sapiente eaque, autem blanditiis tenetur!
+                  </p>
+                </div>
+                <div class="col s3">
+                  <h6>@Venmo-Name</h6>
+                </div>
+              </div>
+              <hr>
+                <div class="row tutor-card">
+                  <div class="col offset-s1 s8 left">
+                    <div class="row">
+                      <div class="col">
+                        <p>
+                          Amazing Reviews!
+                        </p>
+                        <p>
+                          -John Doe
+                        </p>
+                      </div>
+                      <div class="col">
+                        <p>
+                          Amazing Reviews!
+                        </p>
+                        <p>
+                          -John Doe
+                        </p>
+                      </div>
+                      <div class="col">
+                        <p>
+                          Amazing Reviews!
+                        </p>
+                        <p>
+                          -John Doe
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s3">
+                    <h6>40 Shmeckles a Minute</h6>
+                  </div>
+                </div>
+          </div>
+        </a>
+        <a href="mailto:email@gmail.com">
+          <div class="card-panel tutor-card">
+            <div class="row tutor-img-fix">
+              <div class="col s4 center">
+                <img src="https://place-hold.it/50x50">
+                &nbsp
+                &nbsp
+                &nbsp
+                <span class="orange-text">Student Name</span>
+              </div>
+            </div>
+               <div class="row">
+                <div class="col offset-s1 s8 left">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae delectus inventore odio unde consequuntur ex, optio iusto itaque est sed a, sit voluptate! Sunt sint sapiente eaque, autem blanditiis tenetur!
+                  </p>
+                </div>
+                <div class="col s3">
+                  <h6>@Venmo-Name</h6>
+                </div>
+              </div>
+              <hr>
+                <div class="row tutor-card">
+                  <div class="col offset-s1 s8 left">
+                    <div class="row">
+                      <div class="col">
+                        <p>
+                          Amazing Reviews!
+                        </p>
+                        <p>
+                          -John Doe
+                        </p>
+                      </div>
+                      <div class="col">
+                        <p>
+                          Amazing Reviews!
+                        </p>
+                        <p>
+                          -John Doe
+                        </p>
+                      </div>
+                      <div class="col">
+                        <p>
+                          Amazing Reviews!
+                        </p>
+                        <p>
+                          -John Doe
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s3">
+                    <h6>40 Shmeckles a Minute</h6>
+                  </div>
+                </div>
+          </div>
+        </a>
+        {{!-- Handlebars Cards --}}
+        <ul id="tutor-list" class="list-group">
+          {{#each tutor}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="tutors/{{this.id}}">{{this.name}}</a>
+            <p>{{this.classDescription}}</p>
+            <p>{{this.venmo}}</p>
+            <p>{{this.hourlyCost}}</p>
+            <p>{{this.reviews}}</p>
+            <button onclick="location.href='{{this.tutorEmail}}';">Book Appointment</button>
+            <button class="btn float-left">Update Listing</button>
+            <button class="btn float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+    </div>
+    {{!-- Right Sidebar --}}
+    <div class="col s2 white center">
+      <img class="ad-margin"src="https://place-hold.it/150x500">
+    </div>
+  </div>
+</div>
+{{!-- Old Footer --}}
+{{!-- <div class="footer">
+  <div class="row">
+    <p class="col offset-s3 s6 copyright valign-wrapper-center">&copy; Copyright 2018 
+    </p>
+    <div class="col s3">
+    Tutor? Sign Up Here! &nbsp 
+    <a class="waves-effect waves-light orange btn">Post Job</a>
+    </div>
+  </div>                
+</div> --}}
+{{!-- New Footer --}}
+<footer class="page-footer">
+    <div class="row footer-fix">
+      <p class="col offset-s5 s2 copyright">&copy; Copyright 2018 
+      </p>
+      <div class="col offset-s2 s3 center button-fix">
+      Tutor? Sign Up Here! &nbsp 
+      <a class="waves-effect waves-light orange btn">Post Job</a>
+      </div>
+    </div>  
+</footer>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
