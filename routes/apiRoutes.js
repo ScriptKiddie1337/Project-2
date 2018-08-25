@@ -1,27 +1,61 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  //Return all Tutor Posts
+  app.get("/api/posts", function(req, res) {
+    db.Example.findAll({}).then(function(results) {
+      res.status(200);
+      res.json(results);
     });
   });
 
-  // Create a Tutor Posting
-  app.post("/api/createpost", function(req, res) {
-    /*db.TutorPost.create(req.body).then(function(results))*/
-    db.Example.create(req.body).then(function() {
-      res.json(dbExample);
+  //Return all the Student Reviews
+  app.get("/api/reviews", function(req, res) {
+    db.Example.findAll({}).then(function(results) {
+      res.status(200);
+      res.json(results);
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.json(dbExample);
+  //Return all student reviews specifically for a Tutor Post
+  app.get("/api/reviews/:id", function(req, res) {
+    db.Example.findAll({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(results) {
+      res.status(200);
+      res.json(results);
+    });
+  });
+
+  //Return all Subjects, this should be used in create a post dropdown list
+  app.get("/api/subjects", function(req, res) {
+    db.Example.findAll({}).then(function(results) {
+      res.status(200);
+      res.json(results);
+    });
+  });
+
+  //Create a new Post
+  app.post("/api/post", function(req, res) {
+    db.Example.create(req.body).then(function(affectedRows) {
+      if (affectedRows === 0) {
+        res.status(400).end();
+      } else {
+        res.status(200).end();
+      }
+    });
+  });
+
+  //Create a new Post
+  app.post("/api/review", function(req, res) {
+    db.Example.create(req.body).then(function(affectedRows) {
+      if (affectedRows === 0) {
+        res.status(400).end();
+      } else {
+        res.status(200).end();
+      }
     });
   });
 };
