@@ -2,6 +2,10 @@
 
 module.exports = function(app) {
   //Displays the home page
+  app.get("/", function(req, res) {
+    res.render("index");
+  });
+
   app.get("/index", function(req, res) {
     res.render("index");
   });
@@ -28,13 +32,6 @@ module.exports = function(app) {
       });
     });
   });
-
-  //TODO: Update a Review by Student
-  //If we agree adding this I will add it
-  //app.get(/review/update/:id, function(req, res) {
-  //  db.Example.findOne({
-  //})
-  //})
 
   app.get("*", function(req, res) {
     res.render("404");
