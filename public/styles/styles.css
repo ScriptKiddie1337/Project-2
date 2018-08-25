@@ -47,6 +47,11 @@ h1 {
   background-color: skyblue;
 }
 
+#defaultPic {
+  max-width: 200px;
+  max-height: 200px;
+}
+
 /* Footer */
 .footer {
   background-color: blue;
