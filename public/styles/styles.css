@@ -5,7 +5,7 @@
 
 /* Creates a sticky footer */
  .wrapper {
-  min-height: calc(100vh - 50px);
+  min-height: 100vh;
   /* max-width: 2560px;
   width: 100%;
   margin: 0; */
@@ -54,18 +54,6 @@ h1 {
   max-height: 200px;
 }
 
-/* Footer */
-.footer {
-  position: fixed;
-  background-color: blue;
-  text-align: center;
-  color: white;
-  height: 50px;
-  margin-bottom: 0;
-  line-height: 50px;
-  width: 100%;
-}
-
 /* Students page */
 
 /* Header */
@@ -110,6 +98,8 @@ h1 {
 }
 
 .page-footer {
-  background-color: blue; 
+  background-color: blue;
+  min-height: 50px;
+  line-height: 50px; 
 }
 
