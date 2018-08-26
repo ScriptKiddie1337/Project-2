@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var TutorPost = sequelize.define("tutorPosts", {
+  var TutorPosts = sequelize.define("TutorPosts", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -12,8 +12,14 @@ module.exports = function(sequelize, DataTypes) {
         len: [1, 500]
       }
     },
-    hourlyPricing: DataTypes.DOUBLE(5, 2),
+    hourlyRate: DataTypes.DOUBLE(5, 2),
     email: DataTypes.STRING
   });
-  return TutorPost;
+
+  TutorPosts.associate = function(models) {
+    TutorPosts.hasMany(models.Reviews, {
+      onDelete: "cascade"
+    });
+  };
+  return TutorPosts;
 };
