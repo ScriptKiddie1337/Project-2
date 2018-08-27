@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Reviews = sequelize.define("reviews", {
+  var Reviews = sequelize.define("Reviews", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -12,8 +12,16 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 500]
       }
-    },
-    date: DataTypes.DATE
+    }
   });
+
+  Reviews.associate = function(models) {
+    Reviews.belongsTo(models.TutorPosts, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
   return Reviews;
 };

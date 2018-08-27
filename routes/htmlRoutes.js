@@ -1,4 +1,4 @@
-//var db = require("../models");
+var db = require("../models");
 
 module.exports = function(app) {
   //Displays the home page
@@ -22,7 +22,7 @@ module.exports = function(app) {
 
   //Update a Tutor Post Page
   app.get("/posts/update/:id", function(req, res) {
-    db.Example.findOne({
+    db.TutorPosts.findOne({
       where: {
         id: req.params.id
       }
