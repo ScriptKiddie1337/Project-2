@@ -5,15 +5,58 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
-    imageURL: DataTypes.STRING,
+    firstName: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1, 30],
+        notEmpty: true
+      }
+    },
+    lastName: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1, 30],
+        notEmpty: true
+      }
+    },
+    venmoName: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1, 30],
+        notEmpty: true
+      }
+    },
+    subject: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1, 30],
+        notEmpty: true
+      }
+    },
+    imageURL: {
+      type: DataTypes.STRING
+    },
     description: {
       type: DataTypes.TEXT,
       validate: {
-        len: [1, 500]
+        len: [1, 500],
+        notEmpty: true
       }
     },
-    hourlyRate: DataTypes.DOUBLE(5, 2),
-    email: DataTypes.STRING
+    hourlyRate: {
+      type: DataTypes.DOUBLE(5, 2),
+      validate: {
+        isDecimal: true,
+        notNull: true
+      }
+    },
+    email: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1, 100],
+        notEmpty: true
+      }
+    }
   });
 
   TutorPosts.associate = function(models) {
