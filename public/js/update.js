@@ -13,4 +13,16 @@ $(document).ready(function() {
       }
     });
   }
+
+//   function updatePost(post) {
+//     $.ajax({
+//       method: "PUT",
+//       url: "/api/posts",
+//       data: post
+//     }).then(function() {
+//       window.location.href = "/students";
+//     });
+//   }
+
+  getPostData();
 });
