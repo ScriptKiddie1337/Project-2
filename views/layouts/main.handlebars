@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
@@ -11,8 +12,32 @@
 
 <body>
   {{{body}}}
-
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  {{!-- /Tutors Form Dropdown Selector jQuery --}}
+  <script>
+     $(document).ready(function(){
+      $('select').formSelect();
+     });
+  </script>
+  {{!-- /Students Autocomplete Search jQuery --}}
+  <script>
+    $(document).ready(function(){
+    $('input.autocomplete').autocomplete({
+      data: {
+        "Apple": null,
+        "Microsoft": null,
+        "Google": 'https://placehold.it/250x250'
+      },
+    });
+  });
+  </script>
+  {{!-- /Tutors File Upload and Character Count --}}
+  <script>
+     $(document).ready(function() {
+      $('input#input_text, textarea#textarea2').characterCounter();
+     });
+  </script>
 </body>
 
 </html>

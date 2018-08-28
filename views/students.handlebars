@@ -1,14 +1,12 @@
 <div class="wrapper">
   {{!-- Header With Search--}}
   <div class="header">
-    <div class="row">
-        <div class="col s12">
-          <div class="row">
-            <div class="input-field input-autocomplete col offset-s3 s6">
-              <i class="material-icons prefix">textsms</i>
-              <input type="text" id="autocomplete-input" class="autocomplete">
-              <label for="autocomplete-input">Search Tutors</label>
-            </div>
+    <div class="row search-margin">
+        <div class="col offset-s3 s6 search-bg-height valign-wrapper">
+          <div class="input-field input-autocomplete">
+            <i class="material-icons prefix purple-text">create</i>
+            <input type="text" id="autocomplete-input" class="autocomplete">
+            <label for="autocomplete-input">Search Tutors</label>
           </div>
         </div>
       </div>
@@ -16,31 +14,20 @@
   {{!-- Body --}}
   <div class="row">
     {{!-- Left Sidebar --}}
-    <div class="col s2 white">
-      {{!-- Placeholder Tag Buttons --}}
+    <div class="col s2 white tag-margin">
+      <h6 class="center"><b>Choose a Subject</b></h6>
+      {{!-- Static Subject Tag Buttons --}}
       <div class="row center sidebar-margin">
-        <a class="waves-effect waves-light red btn">Algebra</a>
+        <a class="waves-effect waves-light grey sidebar-btn btn">All Classes</a>
       </div>
       <div class="row center">
-        <a class="waves-effect waves-light red btn">Algebra</a>
+        <a class="waves-effect waves-light red sidebar-btn btn">Algebra</a>
       </div>
       <div class="row center">
-        <a class="waves-effect waves-light red btn">Algebra</a>
+        <a class="waves-effect waves-light green sidebar-btn btn">CSS</a>
       </div>
       <div class="row center">
-        <a class="waves-effect waves-light red btn">Algebra</a>
-      </div>
-      <div class="row center">
-        <a class="waves-effect waves-light red btn">Algebra</a>
-      </div>
-      <div class="row center">
-        <a class="waves-effect waves-light red btn">Algebra</a>
-      </div>
-      <div class="row center">
-        <a class="waves-effect waves-light red btn">Algebra</a>
-      </div>
-      <div class="row center">
-        <a class="waves-effect waves-light red btn">Algebra</a>
+        <a class="waves-effect waves-light light-blue sidebar-btn btn">Economics</a>
       </div>
       {{!-- Handlebars Tag Buttons --}}
       <ul id="tag-list" class="list-group">
@@ -51,195 +38,155 @@
         {{/each}}
       </ul>
     </div>
-      {{!-- Tutor Listing Card --}}
-      <div class="col s8 white">
-        {{!-- Placeholder Card --}}
-        <a href="mailto:email@gmail.com">
-          <div class="card-panel tutor-card">
-            <div class="row tutor-img-fix">
-              <div class="col s4 center">
-                <img src="https://place-hold.it/50x50">
-                &nbsp
-                &nbsp
-                &nbsp
-                <span class="orange-text">Student Name</span>
-              </div>
-            </div>
-               <div class="row">
-                <div class="col offset-s1 s8 left">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae delectus inventore odio unde consequuntur ex, optio iusto itaque est sed a, sit voluptate! Sunt sint sapiente eaque, autem blanditiis tenetur!
-                  </p>
-                </div>
-                <div class="col s3">
-                  <h6>@Venmo-Name</h6>
-                </div>
-              </div>
-              <hr>
-                <div class="row tutor-card">
-                  <div class="col offset-s1 s8 left">
+      {{!-- Tutor Listing Column --}}
+      <div class="col s8 white tutor-col-margin">
+        {{!-- Tutor Listing Card --}}
+        <div class="col s12">
+          <div class="card-panel" id="tutorListing">
+            <div class="row">
+              <div class="col s12">
+                <div class="row form-margin">
+                  {{!-- Picture --}}
+                  <div class="col s4 center">
+                    <div class="row">
+                      <div class="col s12">
+                        <img id="defaultPic" class="tutor-pic" src="https://place-hold.it/150x150">
+                      </div>
+                    </div>  
+                  </div>
+                  {{!-- Tutor Posting Details --}}
+                  <div class="col s8">
+                    <div class="row lower-tutor-card-margin">
+                      <div class="col s6">
+                        <h3><i class="fas fa-address-card"><span class="tutorName"> John Doe</span></i></h3>
+                      </div>
+                      <div class="col s6">
+                        <h3 class="pay-margin"><i class="fas fa-address-card"><span class="tutorName"> <span class="venmoDollars">25</span>/Hr</span></i></h3>
+                        <p><span class="venmoName">@PayMeMoney</span></p>
+                      </div> 
+                    </div>
                     <div class="row">
                       <div class="col">
-                        <p>
-                          Amazing Reviews!
+                        <hr>
+                        <p>Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description
                         </p>
-                        <p>
-                          -John Doe
-                        </p>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col s6">
+                    <div class="row">
+                      <div class="col s4">
+                        <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
+                        <p><span class="reviewerDescription">Bla bla bla blab la blab labl</span></p>
                       </div>
-                      <div class="col">
-                        <p>
-                          Amazing Reviews!
-                        </p>
-                        <p>
-                          -John Doe
-                        </p>
+                      <div class="col s4">
+                        <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
+                        <p><span class="reviewerDescription">Bla bla bla blab la blab labl</span></p>
                       </div>
-                      <div class="col">
-                        <p>
-                          Amazing Reviews!
-                        </p>
-                        <p>
-                          -John Doe
-                        </p>
+                      <div class="col s4">
+                        <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
+                        <p><span class="reviewerDescription">Bla bla bla blab la blab labl</span></p>
                       </div>
                     </div>
                   </div>
-                  <div class="col s3">
-                    <h6>40 Shmeckles a Minute</h6>
-                  </div>
+                  <form class="col s6 review-border">
+                    <h6 class="center"><b>Write a Review</b></h6>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="reviewerNameInput" type="text" class="validate">
+                          <label for="reviewerNameInput">Reviewer Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="reviewerDescriptionInput" type="text" class="validate">
+                          <label for="reviewerDescriptionInput">Review Description</label>
+                        </div>
+                      </div>
+                      <div class="row center">
+                        <button class="btn hoverable review-btn" type="submit" name="action">Submit
+                          <i class="material-icons right">send</i>
+                        </button>
+                      </div>
+                  </form>
                 </div>
-          </div>
-        </a>
-        <a href="mailto:email@gmail.com">
-          <div class="card-panel tutor-card">
-            <div class="row tutor-img-fix">
-              <div class="col s4 center">
-                <img src="https://place-hold.it/50x50">
-                &nbsp
-                &nbsp
-                &nbsp
-                <span class="orange-text">Student Name</span>
               </div>
             </div>
-               <div class="row">
-                <div class="col offset-s1 s8 left">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae delectus inventore odio unde consequuntur ex, optio iusto itaque est sed a, sit voluptate! Sunt sint sapiente eaque, autem blanditiis tenetur!
-                  </p>
-                </div>
-                <div class="col s3">
-                  <h6>@Venmo-Name</h6>
-                </div>
-              </div>
-              <hr>
-                <div class="row tutor-card">
-                  <div class="col offset-s1 s8 left">
+          </div>
+          <div class="card-panel" id="tutorListing">
+            <div class="row">
+              <div class="col s12">
+                <div class="row form-margin">
+                  {{!-- Picture --}}
+                  <div class="col s4 center">
+                    <div class="row">
+                      <div class="col s12">
+                        <img id="defaultPic" class="tutor-pic" src="https://place-hold.it/150x150">
+                      </div>
+                    </div>  
+                  </div>
+                  {{!-- Tutor Posting Details --}}
+                  <div class="col s8">
+                    <div class="row lower-tutor-card-margin">
+                      <div class="col s6">
+                        <h3><i class="fas fa-address-card"><span class="tutorName"> John Doe</span></i></h3>
+                      </div>
+                      <div class="col s6">
+                        <h3 class="pay-margin"><i class="fas fa-address-card"><span class="tutorName"> <span class="venmoDollars">25</span>/Hr</span></i></h3>
+                        <p><span class="venmoName">@PayMeMoney</span></p>
+                      </div> 
+                    </div>
                     <div class="row">
                       <div class="col">
-                        <p>
-                          Amazing Reviews!
+                        <hr>
+                        <p>Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description
                         </p>
-                        <p>
-                          -John Doe
-                        </p>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col s6">
+                    <div class="row">
+                      <div class="col s4">
+                        <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
+                        <p><span class="reviewerDescription">Bla bla bla blab la blab labl</span></p>
                       </div>
-                      <div class="col">
-                        <p>
-                          Amazing Reviews!
-                        </p>
-                        <p>
-                          -John Doe
-                        </p>
+                      <div class="col s4">
+                        <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
+                        <p><span class="reviewerDescription">Bla bla bla blab la blab labl</span></p>
                       </div>
-                      <div class="col">
-                        <p>
-                          Amazing Reviews!
-                        </p>
-                        <p>
-                          -John Doe
-                        </p>
+                      <div class="col s4">
+                        <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
+                        <p><span class="reviewerDescription">Bla bla bla blab la blab labl</span></p>
                       </div>
                     </div>
                   </div>
-                  <div class="col s3">
-                    <h6>40 Shmeckles a Minute</h6>
-                  </div>
+                  <form class="col s6 review-border">
+                    <h6 class="center"><b>Write a Review</b></h6>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="reviewerNameInput" type="text" class="validate">
+                          <label for="reviewerNameInput">Reviewer Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="reviewerDescriptionInput" type="text" class="validate">
+                          <label for="reviewerDescriptionInput">Review Description</label>
+                        </div>
+                      </div>
+                      <div class="row center">
+                        <button class="btn hoverable review-btn" type="submit" name="action">Submit
+                          <i class="material-icons right">send</i>
+                        </button>
+                      </div>
+                  </form>
                 </div>
-          </div>
-        </a>
-        <a href="mailto:email@gmail.com">
-          <div class="card-panel tutor-card">
-            <div class="row tutor-img-fix">
-              <div class="col s4 center">
-                <img src="https://place-hold.it/50x50">
-                &nbsp
-                &nbsp
-                &nbsp
-                <span class="orange-text">Student Name</span>
               </div>
             </div>
-               <div class="row">
-                <div class="col offset-s1 s8 left">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae delectus inventore odio unde consequuntur ex, optio iusto itaque est sed a, sit voluptate! Sunt sint sapiente eaque, autem blanditiis tenetur!
-                  </p>
-                </div>
-                <div class="col s3">
-                  <h6>@Venmo-Name</h6>
-                </div>
-              </div>
-              <hr>
-                <div class="row tutor-card">
-                  <div class="col offset-s1 s8 left">
-                    <div class="row">
-                      <div class="col">
-                        <p>
-                          Amazing Reviews!
-                        </p>
-                        <p>
-                          -John Doe
-                        </p>
-                      </div>
-                      <div class="col">
-                        <p>
-                          Amazing Reviews!
-                        </p>
-                        <p>
-                          -John Doe
-                        </p>
-                      </div>
-                      <div class="col">
-                        <p>
-                          Amazing Reviews!
-                        </p>
-                        <p>
-                          -John Doe
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col s3">
-                    <h6>40 Shmeckles a Minute</h6>
-                  </div>
-                </div>
           </div>
-        </a>
-        {{!-- Handlebars Cards --}}
-        <ul id="tutor-list" class="list-group">
-          {{#each tutor}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="tutors/{{this.id}}">{{this.name}}</a>
-            <p>{{this.classDescription}}</p>
-            <p>{{this.venmo}}</p>
-            <p>{{this.hourlyCost}}</p>
-            <p>{{this.reviews}}</p>
-            <button onclick="location.href='{{this.tutorEmail}}';">Book Appointment</button>
-            <button class="btn float-left">Update Listing</button>
-            <button class="btn float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+        </div>
     </div>
     {{!-- Right Sidebar --}}
     <div class="col s2 white center">
@@ -254,7 +201,7 @@
       </p>
       <div class="col offset-s2 s3 center button-fix">
       Tutor? Sign Up Here! &nbsp 
-      <a href="/tutors" class="waves-effect waves-light orange btn">Post Job</a>
+      <a href="/tutors" class="waves-effect waves-light orange btn"><i class="fas fa-thumbtack"></i> Post a Lesson</a>
       </div>
     </div>  
 </footer>
