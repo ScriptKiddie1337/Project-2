@@ -116,6 +116,12 @@ h1 {
   vertical-align: middle;
 }
 
+.btn-small {
+  height: 20px;
+  line-height: 20px;
+  margin-top: 0px;
+}
+
 /* Footer */
 .footer-fix {
   margin-bottom: 0px;
