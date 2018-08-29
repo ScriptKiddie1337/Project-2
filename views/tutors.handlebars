@@ -68,7 +68,7 @@
                           <label for="tutor_email"><i class="fas fa-envelope-square"></i> Email Address</label>
                         </div>
                         <div class="input-field col s12" id="tag">
-                          <select multiple>
+                          <select multiple id="subject">
                               <option value="" disabled selected>Choose Your Area of Expertise</option>
                               <option value="1">Algebra</option>
                               <option value="2">CSS</option>
@@ -86,18 +86,18 @@
                   <label for="venmo"><i class="fas fa-money-check-alt"></i> @Venmo Name</label>
                 </div>
                 <div class="input-field col s6">
-                  <textarea id="Price" class="materialize-textarea"></textarea>
-                  <label for="Price"><i class="fas fa-dollar-sign"></i> xx/hr</label>
+                  <textarea id="price" class="materialize-textarea"></textarea>
+                  <label for="price"><i class="fas fa-dollar-sign"></i> xx/hr</label>
                 </div>
               </div>
               <div class="row">
                  <div class="input-field col s12">
-                  <textarea id="job-description" class="materialize-textarea"></textarea>
-                  <label for="job-description"><i class="fas fa-align-left"></i> Job Description</label>
+                  <textarea id="jobDescription" class="materialize-textarea"></textarea>
+                  <label for="jobDescription"><i class="fas fa-align-left"></i> Job Description</label>
                 </div>
               </div>
               <div class="row center">
-                <button class="btn waves-effect waves-light hoverable orange" type="submit" name="action">Post Job
+                <button class="btn waves-effect waves-light hoverable orange" type="submit" name="action" id="postSubmit">Post Job
                 <i class="material-icons right">send</i>
                 </button>
               </div>
@@ -125,4 +125,4 @@
 </footer>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script src="/js/tutorPost.js"></script>
