@@ -49,12 +49,8 @@ module.exports = function(app) {
     Returns: Status of 200 on AffectedRows > 0
   */
   app.post("/api/post", function(req, res) {
-    db.TutorPosts.create(req.body).then(function(affectedRows) {
-      if (affectedRows === 0) {
-        res.status(400).end();
-      } else {
-        res.status(200).end();
-      }
+    db.TutorPosts.create(req.body).then(function(data) {
+      res.json(data);
     });
   });
 

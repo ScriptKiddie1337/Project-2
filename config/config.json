@@ -2,7 +2,7 @@
     "development": {
       "username": "root",
       "password": null,
-      "database": null,
+      "database": "tutorific_db",
       "host": "localhost",
       "dialect": "mysql"
     },
