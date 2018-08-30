@@ -43,14 +43,13 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true
       }
     },
-    // hourlyRate: {
-    //   type: DataTypes.DOUBLE(5, 2),
-    //   validate: {
-    //     isDecimal: true,
-    //     allowNull: false,
-    //     defaultValue: 0
-    //   }
-    // },
+    hourlyRate: {
+      type: DataTypes.DOUBLE(5, 2),
+      validate: {
+        isDecimal: true,
+        allowNull: false
+      }
+    },
     email: {
       type: DataTypes.STRING,
       validate: {
