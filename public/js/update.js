@@ -1,11 +1,16 @@
 $(document).ready(function() {
-  let url = window.location.search;
-  let postId;
-  let updating = false;
+  var url = window.location.search;
+  var postId;
+  var updating = true;
 
   if (url.indexOf("?post_id=") !== -1) {
     postId = url.split("=")[1];
     getPostData(postId);
+  }
+
+  if (updating) {
+    newPost.id = postId;
+    updatePost(newPost);
   }
 
   function getPostData(id) {
@@ -20,7 +25,7 @@ $(document).ready(function() {
         $("#price").val(data.hourlyRate);
         $("#job-description").val(data.description);
 
-        updating = true;
+        // updating = true;
       }
     });
   }
