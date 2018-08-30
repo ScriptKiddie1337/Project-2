@@ -53,8 +53,8 @@ module.exports = function(app) {
       if (!data) {
         res.status(400).end();
       } else {
-        res.json(data);
-        res.status(200).end();
+        res.status(200);
+        res.json(data).end();
       }
     });
   });
