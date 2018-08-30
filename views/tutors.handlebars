@@ -1,7 +1,7 @@
 <div class="wrapper">
   {{!-- Header --}}
   <div class="header">
-    <h1 class="title tutor-h1-margin"><i class="fas fa-thumbtack"></i> Post A Lesson</h1>
+    <h1 class="title tutor-h1-margin drop-shadow"><i class="fas fa-thumbtack"></i> Post A Lesson</h1>
   </div>
 
 {{!-- Body --}}
@@ -19,38 +19,68 @@
     </div>
       {{!-- Tutor Listing Card --}}
       <div class="col s7 white tutor-card-margin">
-      <div class="col s12">
-        <div class="card-panel" id="tutorForm">
-          <div class="row">
-            <form class="col s12">
-              <div class="row form-margin">
-                {{!-- Upload Picture --}}
-                <div class="col s4 center upper-right-form-margin">
-                  <div class="row">
-                    <div class="col s12">
-                      <img id="defaultPic" src="https://place-hold.it/150x150">
-                    </div>
+      <div class="row">
+        <div class="col s12">
+          <div class="card-panel" id="tutorForm">
+            <div class="row">
+              <form class="col s12">
+                <div class="row form-margin">
+                  {{!-- Upload Picture --}}
+                  <div class="col s4 center upper-right-form-margin">
                     <div class="row">
-                      <div class="col s6">
-                        <div class="input-field">
-                          <textarea id="tutor_url" class="materialize-textarea"></textarea>
-                          <label for="tutor_url"><i class="fas fa-camera-retro"></i> Profile URL</label>
-                        </div>
+                      <div class="col s12">
+                        <img id="defaultPic" src="https://place-hold.it/150x150">
                       </div>
-                      <div class="col s5">    
-                        <div class="file-field input-field">
-                          <div class="btn orange">
-                            <span><i class="fas fa-download"></i></span>
-                            <input type="file">
-                          </div>
-                          <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text">
+                      <div class="row">
+                        <div class="col offset-s1 s10 url-margin">
+                          <div class="input-field">
+                            <textarea id="tutor_url" class="materialize-textarea"></textarea>
+                            <label for="tutor_url"><i class="fas fa-camera-retro"></i> Profile URL</label>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>  
+                    </div>  
+                  </div>
+                  {{!-- Fill Out Form --}}
+                  <div class="col s8">
+                      <div class="row lower-tutor-card-margin">
+                          <div class="input-field col s6">
+                            <input id="tutor_first_name" type="text" class="validate">
+                            <label for="tutor_first_name"><i class="fas fa-address-card"></i> First Name</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input id="tutor_last_name" type="text" class="validate">
+                            <label for="tutor_last_name"><i class="fas fa-address-card"></i> Last Name</label>
+                          </div>
+                      <div class="row">
+                          <div class="input-field col s12">
+                            <input id="tutor_email" type="email" class="validate">
+                            <label for="tutor_email"><i class="fas fa-envelope-square"></i> Email Address</label>
+                          </div>
+                          <div class="input-field col s12" id="tag">
+                            <select>
+                                <option value="" disabled>Choose Your Area of Expertise</option>
+                                <option value="1">Algebra</option>
+                                <option value="2">CSS</option>
+                                <option value="3">Economics</option>
+                              </select>
+                            <label><i class="fas fa-pencil-ruler"></i> Tutoring Subject(s)</label>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
                 </div>
+<<<<<<< HEAD
+                <div class="row">
+                  <div class="input-field col s6">
+                    <textarea id="venmo" class="materialize-textarea"></textarea>
+                    <label for="venmo"><i class="fas fa-money-check-alt"></i> @Venmo Name</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <textarea id="Price" class="materialize-textarea"></textarea>
+                    <label for="Price"><i class="fas fa-dollar-sign"></i> xx/hr</label>
+                  </div>
+=======
                 {{!-- Fill Out Form --}}
                 <div class="col s8">
                      <div class="row lower-tutor-card-margin">
@@ -78,13 +108,29 @@
                         </div>
                       </div>
                     </div>
+>>>>>>> bf7bcc7d03e1efe27419c5a70decbf7ca3bfc3c5
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s6">
-                  <textarea id="venmo" class="materialize-textarea"></textarea>
-                  <label for="venmo"><i class="fas fa-money-check-alt"></i> @Venmo Name</label>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="job-description" class="materialize-textarea"></textarea>
+                    <label for="job-description"><i class="fas fa-sign"></i> Job Title</label>
+                  </div>
                 </div>
+<<<<<<< HEAD
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="job-description" class="materialize-textarea"></textarea>
+                    <label for="job-description"><i class="fas fa-align-left"></i> Job Description</label>
+                  </div>
+                </div>
+                <div class="row center">
+                  <button class="btn waves-effect waves-light hoverable orange" type="submit" name="action">Post Job
+                  <i class="material-icons right">send</i>
+                  </button>
+                </div>
+              </form>
+            </div>
+=======
                 <div class="input-field col s6">
                   <textarea id="price" class="materialize-textarea"></textarea>
                   <label for="price"><i class="fas fa-dollar-sign"></i> xx/hr</label>
@@ -102,6 +148,7 @@
                 </button>
               </div>
             </form>
+>>>>>>> bf7bcc7d03e1efe27419c5a70decbf7ca3bfc3c5
           </div>
         </div>
       </div>

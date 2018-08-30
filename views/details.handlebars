@@ -1,0 +1,171 @@
+<div class="wrapper">
+  {{!-- Header With Search--}}
+  <div class="header">
+    <div class="row search-margin">
+        <div class="col offset-s3 s6 search-bg-height valign-wrapper">
+            <div class="col s9">
+              <form>
+                <div class="input-field input-autocomplete">
+                  <i class="material-icons prefix purple-text">create</i>
+                  <input type="text" id="autocomplete-input" class="autocomplete">
+                  <label for="autocomplete-input">Search Tutors</label>
+                </div>
+              </div>
+              <div class="col s3 valign-wrapper">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                  <i class="material-icons right">class</i>
+                </button>
+              </div>
+            </form> 
+        </div>
+      </div>
+  </div>
+  {{!-- Body --}}
+  <div class="row">
+    {{!-- Left Sidebar --}}
+    <div class="col s2 white tag-margin">
+      <h6 class="center"><b>Choose a Subject</b></h6>
+      {{!-- Static Subject Tag Buttons --}}
+      <div class="row center sidebar-margin">
+        <a class="waves-effect waves-light grey sidebar-btn btn">All Classes</a>
+      </div>
+      <div class="row center">
+        <a class="waves-effect waves-light red sidebar-btn btn">Algebra</a>
+      </div>
+      <div class="row center">
+        <a class="waves-effect waves-light green sidebar-btn btn">CSS</a>
+      </div>
+      <div class="row center">
+        <a class="waves-effect waves-light light-blue sidebar-btn btn">Economics</a>
+      </div>
+      {{!-- Handlebars Tag Buttons --}}
+      <ul id="tag-list" class="list-group">
+        {{#each tag}}
+        <li data-id="{{this.tagid}}">
+          <button class="bt">{{this.tagName}}</button>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+      {{!-- Tutor Listing Column --}}
+      <div class="col s8 white tutor-col-margin">
+        {{!-- #each tutorposts --}}
+        {{!-- Tutor Listing Card --}}
+        <div class="row">
+          <div class="col s12">
+            <div class="card-panel" id="tutorListing">
+              <div class="row">
+                <div class="col s12">
+                  <div class="row form-margin">
+                    <a class="waves-effect waves-light red btn-small right">Edit</a>
+                    {{!-- Picture --}}
+                    <div class="col s4 center">
+                      <div class="row">
+                        <div class="col s12">
+                          <img id="defaultPic" class="tutor-pic" src="https://place-hold.it/150x150">
+                          {{!-- imgURL --}}
+                        </div>
+                      </div>  
+                    </div>
+                    {{!-- Tutor Posting Details --}}
+                    <div class="col s8">
+                      <div class="row lower-tutor-card-margin">
+                        <div class="col s6">
+                          <h3><i class="fas fa-address-card"><span class="tutorName"> John Doe</span></i></h3>
+                          {{!-- firstName --}}
+                          {{!-- lastName --}}
+                        </div>
+                        <div class="col s6">
+                          <h3 class="pay-margin"><i class="fas fa-money-bill-wave-alt"></i><span class="tutorName"> <span class="venmoDollars">25</span>/Hr</span></i></h3>
+                          {{!-- hourlyRate --}}
+                          <p><span class="venmoName">@PayMeMoney</span></p>
+                          {{!-- venmoName --}}
+                        </div> 
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <hr>
+                          <p>Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description
+                          </p>
+                          {{!-- description --}}
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col s6">
+                      <div class="row">
+                        <div class="col s4">
+                          <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
+                          <p><span class="reviewerDescription">Bla bla bla blab la blab labl</span></p>
+                        </div>
+                        <div class="col s4">
+                          <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
+                          <p><span class="reviewerDescription">Bla bla bla blab la blab labl</span></p>
+                        </div>
+                        <div class="col s4">
+                          <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
+                          <p><span class="reviewerDescription">Bla bla bla blab la blab labl</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <form class="col s6 review-border">
+                      <h6 class="center"><b>Write a Review</b></h6>
+                        <div class="row">
+                          <div class="input-field col s6">
+                            <input id="reviewerNameInput" type="text" class="validate">
+                            <label for="reviewerNameInput">Reviewer Name</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input id="reviewerDescriptionInput" type="text" class="validate">
+                            <label for="reviewerDescriptionInput">Review Description</label>
+                          </div>
+                        </div>
+                        <div class="row center">
+                          <button class="btn hoverable review-btn" type="submit" name="action">Post Review
+                            <i class="material-icons right">send</i>
+                          </button>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 center">
+            <ul class="pagination">
+              <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+              <li class="active"><a href="#!">1</a></li>
+              <li class="waves-effect"><a href="#!">2</a></li>
+              <li class="waves-effect"><a href="#!">3</a></li>
+              <li class="waves-effect"><a href="#!">4</a></li>
+              <li class="waves-effect"><a href="#!">5</a></li>
+              <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+          </div>  
+        </div>
+      {{!-- /each --}}
+    </div>
+    {{!-- Right Sidebar --}}
+    <div class="col s2 white center">
+      <img class="ad-margin"src="https://place-hold.it/150x500">
+    </div>
+  </div>
+</div>
+{{!-- Footer --}}
+<footer class="page-footer">
+    <div class="row footer-fix">
+      <p class="col offset-s5 s2 copyright">&copy; Copyright 2018 
+      </p>
+      <div class="col offset-s2 s3 center button-fix">
+      Tutor? Sign Up Here! &nbsp 
+      <a href="/tutors" class="waves-effect waves-light orange btn"><i class="fas fa-thumbtack"></i> Post a Lesson</a>
+      </div>
+    </div>  
+</footer>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
