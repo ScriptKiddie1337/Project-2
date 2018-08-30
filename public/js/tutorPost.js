@@ -15,12 +15,10 @@ $("#postSubmit").on("click", function(event) {
       .val()
       .trim(),
     subject: $("#subject").val(),
-    venmo: $("#venmo")
+    venmoName: $("#venmo")
       .val()
       .trim(),
-    price: $("#price")
-      .val()
-      .trim(),
+    hourlyRate: parseFloat($("#price").val()),
     description: $("#jobDescription")
       .val()
       .trim()
