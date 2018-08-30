@@ -50,7 +50,12 @@ module.exports = function(app) {
   */
   app.post("/api/post", function(req, res) {
     db.TutorPosts.create(req.body).then(function(data) {
-      res.json(data);
+      if (affectedRows === 0) {
+        res.status(400).end();
+      } else {
+        res.json(data);
+        res.status(200).end();
+      }
     });
   });
 

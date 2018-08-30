@@ -27,4 +27,13 @@ $("#postSubmit").on("click", function(event) {
   $.post("/api/post", newPost).then(function(data) {
     console.log(data);
   });
+
+  $("#tutor_url").val("");
+  $("#tutor_first_name").val("");
+  $("#tutor_last_name").val("");
+  $("#tutor_email").val("");
+  $("#subject").val("");
+  $("#venmo").val("");
+  $("#price").val("");
+  $("#jobDescription").val("");
 });
