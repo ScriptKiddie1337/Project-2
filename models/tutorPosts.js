@@ -5,6 +5,13 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
+    title: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1, 150],
+        notEmpty: true
+      }
+    },
     firstName: {
       type: DataTypes.STRING,
       validate: {
