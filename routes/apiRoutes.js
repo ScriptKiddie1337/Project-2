@@ -38,13 +38,18 @@ module.exports = function(app) {
   });
 
   /*
-    Description: Create a new Post
+    ** UPDATED -- 8/29/2018 **
+    Description: Create a new Tutor Post
     Parameter:
     Body: {
-      imageURL: string,
-      description: string,
-      hourlyRate: double,
-      email: string
+      firstName: string, [required]
+      lastName: string, [required]
+      venmoName: string, [required]
+      subject: string, [required]
+      imageURL: string, [optional]
+      description: string, [required]
+      hourlyRate: decimal (ex. 3.00) [required],
+      email: string [required]
     }
     Returns: Return Object Created on Status of 200
   */
@@ -60,6 +65,56 @@ module.exports = function(app) {
   });
 
   /*
+    Description: Update a Tutor Post
+    Parameter:
+    Body: {
+      firstName: string, [required]
+      lastName: string, [required]
+      venmoName: string, [required]
+      subject: string, [required]
+      imageURL: string, [optional]
+      description: string, [required]
+      hourlyRate: decimal (ex. 3.00) [required],
+      email: string [required]
+    }
+    Returns: AffectedRows > 0 on Status 200
+  */
+  app.put("/api/post", function(req, res) {
+    db.TutorPosts.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(affectedRows) {
+      if (affectedRows === 0) {
+        res.status(400).end();
+      } else {
+        res.status(200);
+        res.json(affectedRows).end();
+      }
+    });
+  });
+
+  /*
+    Description: Delete a Tutor Post
+    Parameter: id
+    Returns: Return AffectedRows > 0 on Status of 200
+  */
+  app.delete("/api/post/:id", function(req, res) {
+    db.TutorPosts.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(affectedRows) {
+      if (affectedRows === 0) {
+        res.status(400).end();
+      } else {
+        res.status(200);
+        res.json(affectedRows).end();
+      }
+    });
+  });
+
+  /*
     Description: Create a new Review
     Parameter:
     Body: {
@@ -68,14 +123,35 @@ module.exports = function(app) {
       text: string,
       TutorPostId: int
     }
-    Returns: Status of 200 on AffectedRows > 0
+    Returns: AffectedRows > 0 on Status of 200
   */
   app.post("/api/review", function(req, res) {
     db.Reviews.create(req.body).then(function(affectedRows) {
       if (affectedRows === 0) {
         res.status(400).end();
       } else {
-        res.status(200).end();
+        res.status(200);
+        res.json(affectedRows).end();
+      }
+    });
+  });
+
+  /*
+    Description: Delete a Review
+    Parameter: id
+    Returns: AffectedRows > 0 on Status 200
+  */
+  app.delete("/api/review/:id", function(req, res) {
+    db.Reviews.destroy(req.body, {
+      where: {
+        id: req.params.id
+      }
+    }).then(function(affectedRows) {
+      if (affectedRows === 0) {
+        res.status(400).end();
+      } else {
+        res.status(200);
+        res.json(affectedRows).end();
       }
     });
   });
