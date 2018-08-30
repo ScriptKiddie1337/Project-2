@@ -70,6 +70,7 @@
                       </div>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <div class="row">
                   <div class="input-field col s6">
                     <textarea id="venmo" class="materialize-textarea"></textarea>
@@ -79,6 +80,35 @@
                     <textarea id="Price" class="materialize-textarea"></textarea>
                     <label for="Price"><i class="fas fa-dollar-sign"></i> xx/hr</label>
                   </div>
+=======
+                {{!-- Fill Out Form --}}
+                <div class="col s8">
+                     <div class="row lower-tutor-card-margin">
+                        <div class="input-field col s6">
+                          <input id="tutor_first_name" type="text" class="validate">
+                          <label for="tutor_first_name"><i class="fas fa-address-card"></i> First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="tutor_last_name" type="text" class="validate">
+                          <label for="tutor_last_name"><i class="fas fa-address-card"></i> Last Name</label>
+                        </div>
+                     <div class="row">
+                        <div class="input-field col s12">
+                          <input id="tutor_email" type="email" class="validate">
+                          <label for="tutor_email"><i class="fas fa-envelope-square"></i> Email Address</label>
+                        </div>
+                        <div class="input-field col s12" id="tag">
+                          <select multiple id="subject">
+                              <option value="" disabled selected>Choose Your Area of Expertise</option>
+                              <option value="1">Algebra</option>
+                              <option value="2">CSS</option>
+                              <option value="3">Economics</option>
+                            </select>
+                          <label><i class="fas fa-pencil-ruler"></i> Tutoring Subject(s)</label>
+                        </div>
+                      </div>
+                    </div>
+>>>>>>> bf7bcc7d03e1efe27419c5a70decbf7ca3bfc3c5
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
@@ -86,6 +116,7 @@
                     <label for="job-description"><i class="fas fa-sign"></i> Job Title</label>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <div class="row">
                   <div class="input-field col s12">
                     <textarea id="job-description" class="materialize-textarea"></textarea>
@@ -99,6 +130,25 @@
                 </div>
               </form>
             </div>
+=======
+                <div class="input-field col s6">
+                  <textarea id="price" class="materialize-textarea"></textarea>
+                  <label for="price"><i class="fas fa-dollar-sign"></i> xx/hr</label>
+                </div>
+              </div>
+              <div class="row">
+                 <div class="input-field col s12">
+                  <textarea id="jobDescription" class="materialize-textarea"></textarea>
+                  <label for="jobDescription"><i class="fas fa-align-left"></i> Job Description</label>
+                </div>
+              </div>
+              <div class="row center">
+                <button class="btn waves-effect waves-light hoverable orange" type="submit" name="action" id="postSubmit">Post Job
+                <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </form>
+>>>>>>> bf7bcc7d03e1efe27419c5a70decbf7ca3bfc3c5
           </div>
         </div>
       </div>
@@ -122,4 +172,4 @@
 </footer>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script src="/js/tutorPost.js"></script>

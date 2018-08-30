@@ -5,7 +5,7 @@ module.exports = function(app) {
   app.get("/api/posts", function(req, res) {
     db.TutorPosts.findAll({}).then(function(results) {
       res.status(200);
-      res.json(results);
+      res.json(results).end();
     });
   });
 
@@ -13,7 +13,7 @@ module.exports = function(app) {
   app.get("/api/reviews", function(req, res) {
     db.Reviews.findAll({}).then(function(results) {
       res.status(200);
-      res.json(results);
+      res.json(results).end();
     });
   });
 
@@ -25,7 +25,7 @@ module.exports = function(app) {
       }
     }).then(function(results) {
       res.status(200);
-      res.json(results);
+      res.json(results).end();
     });
   });
 
@@ -46,14 +46,15 @@ module.exports = function(app) {
       hourlyRate: double,
       email: string
     }
-    Returns: Status of 200 on AffectedRows > 0
+    Returns: Return Object Created on Status of 200
   */
   app.post("/api/post", function(req, res) {
-    db.TutorPosts.create(req.body).then(function(affectedRows) {
-      if (affectedRows === 0) {
+    db.TutorPosts.create(req.body).then(function(data) {
+      if (!data) {
         res.status(400).end();
       } else {
-        res.status(200).end();
+        res.status(200);
+        res.json(data).end();
       }
     });
   });
