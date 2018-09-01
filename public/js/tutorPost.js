@@ -21,7 +21,8 @@ $("#postSubmit").on("click", function(event) {
     hourlyRate: parseFloat($("#price").val()),
     description: $("#jobDescription")
       .val()
-      .trim()
+      .trim(),
+    title: $("#job-title").val()
   };
   console.log(newPost);
   $.post("/api/post", newPost).then(function(data) {
@@ -36,4 +37,5 @@ $("#postSubmit").on("click", function(event) {
   $("#venmo").val("");
   $("#price").val("");
   $("#jobDescription").val("");
+  $("#job-title").val("");
 });
