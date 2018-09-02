@@ -18,7 +18,11 @@ $.get("/api/posts", function(data) {
         data[i].title +
         "</h3><h4 class='col s3 drop-shadow'>$: " +
         data[i].hourlyRate +
-        "</h4><div class='row center'><div class='col s12'><a class='orange btn' href='mailto:Test@gmail.com'>Learn More</a><div class='col s6 left'><a class='orange btn' href='mailto:Test@gmail.com'>Book Appointment</a></div></div></div></div>"
+        "</h4><div class='row center'><div class='col s12'><a class='orange btn' href=/posts/" +
+        data[i].id +
+        ">Learn More</a><div class='col s6 left'><a class='orange btn' href=mailto:" +
+        data[i].email +
+        ">Book Appointment</a></div></div></div></div>"
     );
   }
 });
