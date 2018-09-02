@@ -24,40 +24,28 @@
   <div class="row">
     {{!-- Left Sidebar --}}
     <div class="col s2 white tag-margin">
-      <h6 class="center"><b>Choose a Subject</b></h6>
-      {{!-- Static Subject Tag Buttons --}}
-      <div class="row center sidebar-margin">
-        <a class="waves-effect waves-light grey sidebar-btn btn">All Classes</a>
+      <h6 class="center"><b>Native Ads (Taboola)</b></h6>
+      {{!-- Taboola native ads --}}
+      <div class="row center">
+        <img id="defaultPic" class="tutor-pic" src="https://place-hold.it/125x125">
       </div>
       <div class="row center">
-        <a class="waves-effect waves-light red sidebar-btn btn">Algebra</a>
+        <img id="defaultPic" class="tutor-pic" src="https://place-hold.it/125x125">
       </div>
       <div class="row center">
-        <a class="waves-effect waves-light green sidebar-btn btn">CSS</a>
+        <img id="defaultPic" class="tutor-pic" src="https://place-hold.it/125x125">
       </div>
-      <div class="row center">
-        <a class="waves-effect waves-light light-blue sidebar-btn btn">Economics</a>
-      </div>
-      {{!-- Handlebars Tag Buttons --}}
-      <ul id="tag-list" class="list-group">
-        {{#each tag}}
-        <li data-id="{{this.tagid}}">
-          <button class="bt">{{this.tagName}}</button>
-        </li>
-        {{/each}}
-      </ul>
     </div>
-      {{!-- Tutor Listing Column --}}
+      {{!-- Tutor Details Column --}}
       <div class="col s8 white tutor-col-margin">
         {{!-- #each tutorposts --}}
-        {{!-- Tutor Listing Card --}}
+        {{!-- Tutor Details Card --}}
         <div class="row">
-          <div class="col s12">
-            <div class="card-panel" id="tutorListing">
+          <div class="col s12"> 
+            <div class="card-panel teal lighten-3" id="tutorDetails">
               <div class="row">
                 <div class="col s12">
                   <div class="row form-margin">
-                    <a class="waves-effect waves-light red btn-small right">Edit</a>
                     {{!-- Picture --}}
                     <div class="col s4 center">
                       <div class="row">
@@ -65,18 +53,25 @@
                           <img id="defaultPic" class="tutor-pic" src="https://place-hold.it/150x150">
                           {{!-- imgURL --}}
                         </div>
+                      </div>
+                      <div class="row yellow-text">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                       </div>  
                     </div>
                     {{!-- Tutor Posting Details --}}
                     <div class="col s8">
                       <div class="row lower-tutor-card-margin">
-                        <div class="col s6">
+                        <div class="col s6 white-text drop-shadow">
                           <h3><i class="fas fa-address-card"><span class="tutorName"> John Doe</span></i></h3>
                           {{!-- firstName --}}
                           {{!-- lastName --}}
                         </div>
-                        <div class="col s6">
-                          <h3 class="pay-margin"><i class="fas fa-money-bill-wave-alt"></i><span class="venmoDollars">25</span>/Hr</span></i></h3>
+                        <div class="col s6 white-text drop-shadow">
+                          <h3 class="pay-margin"><i class="fas fa-money-bill-wave-alt"></i><span class="tutorName"> <span class="venmoDollars">25</span>/Hr</span></i></h3>
                           {{!-- hourlyRate --}}
                           <p><span class="venmoName">@PayMeMoney</span></p>
                           {{!-- venmoName --}}
@@ -84,69 +79,73 @@
                       </div>
                       <div class="row">
                         <div class="col">
-                          <hr>
-                          <p id="postDescription">Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description
+                          <br>
+                          <p class="white description-text center">Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description
                           </p>
                           {{!-- description --}}
                         </div>  
                       </div>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col s6">
-                      <div class="row">
-                        <div class="col s4">
-                          <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
-                          <p><span class="reviewerDescription">Bla bla bla blab la blab labl</span></p>
-                        </div>
-                        <div class="col s4">
-                          <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
-                          <p><span class="reviewerDescription">Bla bla bla blab la blab labl</span></p>
-                        </div>
-                        <div class="col s4">
-                          <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
-                          <p><span class="reviewerDescription">Bla bla bla blab la blab labl</span></p>
-                        </div>
                       </div>
                     </div>
-                    <form class="col s6 review-border">
-                      <h6 class="center"><b>Write a Review</b></h6>
-                        <div class="row">
-                          <div class="input-field col s6">
-                            <input id="reviewerNameInput" type="text" class="validate">
-                            <label for="reviewerNameInput">Reviewer Name</label>
-                          </div>
-                          <div class="input-field col s6">
-                            <input id="reviewerDescriptionInput" type="text" class="validate">
-                            <label for="reviewerDescriptionInput">Review Description</label>
-                          </div>
-                        </div>
-                        <div class="row center">
-                          <button class="btn hoverable review-btn" type="submit" name="action" id="reviewSubmit">Post Review
-                            <i class="material-icons right">send</i>
-                          </button>
-                        </div>
-                    </form>
                   </div>
                 </div>
+                 <div class="row">
+                  <div class="col s12 center">
+                    <a class="red btn" href="mailto:Test@gmail.com">Book Me!
+                    </a>  
+                  </div>
+                </div>
+                {{!-- Collapsable Review Bar --}}
+                <div class="row">
+                  <ul class="collapsible review-collapsible">
+                    <li>
+                      <div class="collapsible-header white-text teal darken-1"><i class="fas fa-arrow-circle-down"></i>See What People Are Saying</div>
+                      <div class="collapsible-body white">
+                        <div class="row">
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s6">
+                      <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
+                      <p><span class="reviewerDescription">Bla bla bla blab la blab labl Bla bla bla blab la blab lablBla bla bla blab la blab lablBla bla bla blab la blab labl</span></p>
+                    </div>
+                    <div class="col s6">
+                      <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
+                      <p><span class="reviewerDescription">Bla bla bla blab la blab lablBla bla bla blab la blab lablBla bla bla blab la blab labl</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <a class="waves-effect waves-light btn-small">See All Reviews
+                      </a>  
+                    </div>
+                  </div>
+                </div>
+                <form class="col s6 review-border">
+                  <h6 class="center"><b>Write a Review</b></h6>
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input id="reviewerNameInput" type="text" class="validate">
+                        <label for="reviewerNameInput">Reviewer Name</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input id="reviewerDescriptionInput" type="text" class="validate">
+                        <label for="reviewerDescriptionInput">Review Description</label>
+                      </div>
+                    </div>
+                    <div class="row center">
+                      <button class="btn hoverable review-btn" type="submit" name="action" id="reviewSubmit">Post Review&nbsp; 
+                        <i class="fas fa-grin-stars"></i>
+                      </button>
+                    </div>
+                </form>
               </div>
-            </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+            </div>{{!-- card panel --}}
           </div>
-        </div>
-        <div class="row">
-          <div class="col s12 center">
-            <ul class="pagination">
-              <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-              <li class="active"><a href="#!">1</a></li>
-              <li class="waves-effect"><a href="#!">2</a></li>
-              <li class="waves-effect"><a href="#!">3</a></li>
-              <li class="waves-effect"><a href="#!">4</a></li>
-              <li class="waves-effect"><a href="#!">5</a></li>
-              <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-            </ul>
-          </div>  
-        </div>
+        </div>{{!-- row --}} 
       {{!-- /each --}}
     </div>
     {{!-- Right Sidebar --}}
@@ -160,9 +159,9 @@
     <div class="row footer-fix">
       <p class="col offset-s5 s2 copyright">&copy; Copyright 2018 
       </p>
-      <div class="col offset-s2 s3 center button-fix">
-      Tutor? Sign Up Here! &nbsp 
-      <a href="/tutors" class="waves-effect waves-light orange btn"><i class="fas fa-thumbtack"></i> Post a Lesson</a>
+      <div class="col offset-s1 s4 center button-fix">
+      Student? Hire Tutors Here! &nbsp 
+      <a href="/students" class="waves-effect waves-light light-blue btn">View Tutor Listings</a>
       </div>
     </div>  
 </footer>

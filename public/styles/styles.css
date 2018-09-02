@@ -190,3 +190,31 @@ h1 {
 .upper-right-form-margin {
   margin-left: 10px;
 }
+
+.purple-txt {
+  color: rgba(122, 60, 141, 0.548);
+}
+
+/* Details page */
+
+.description-text {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.review-collapsible {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#tutorDetails {
+  padding-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.tutorPreviewMargin {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0px;
+}
