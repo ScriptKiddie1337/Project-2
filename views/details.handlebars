@@ -50,7 +50,7 @@
                     <div class="col s4 center">
                       <div class="row">
                         <div class="col s12">
-                          <img id="defaultPic" class="tutor-pic" src="https://place-hold.it/150x150">
+                          <img id="defaultPic" class="tutor-pic" src="{{tutorInfo.imageURL}}">
                           {{!-- imgURL --}}
                         </div>
                       </div>
@@ -66,21 +66,21 @@
                     <div class="col s8">
                       <div class="row lower-tutor-card-margin">
                         <div class="col s6 white-text drop-shadow">
-                          <h3><i class="fas fa-address-card"><span class="tutorName"> John Doe</span></i></h3>
+                          <h3><i class="fas fa-address-card"><span class="tutorName"> {{tutorInfo.firstName}} {{tutorInfo.lastName}}</span></i></h3>
                           {{!-- firstName --}}
                           {{!-- lastName --}}
                         </div>
                         <div class="col s6 white-text drop-shadow">
-                          <h3 class="pay-margin"><i class="fas fa-money-bill-wave-alt"></i><span class="tutorName"> <span class="venmoDollars">25</span>/Hr</span></i></h3>
+                          <h3 class="pay-margin"><i class="fas fa-money-bill-wave-alt"></i><span class="tutorName"> <span class="venmoDollars">{{tutorInfo.hourlyRate}}</span>/Hr</span></i></h3>
                           {{!-- hourlyRate --}}
-                          <p><span class="venmoName">@PayMeMoney</span></p>
+                          <p><span class="venmoName">Venmo: @{{tutorInfo.venmoName}}</span></p>
                           {{!-- venmoName --}}
                         </div> 
                       </div>
                       <div class="row">
                         <div class="col">
                           <br>
-                          <p class="white description-text center">Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description
+                          <p class="white description-text center">{{tutorInfo.description}}
                           </p>
                           {{!-- description --}}
                         </div>  
@@ -168,4 +168,4 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/review.js"></script>
-<script src="/js/details.js"></script>
+{{!-- <script src="/js/details.js"></script> --}}
