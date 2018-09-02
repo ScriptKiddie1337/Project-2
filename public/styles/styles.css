@@ -103,6 +103,10 @@ h1 {
   margin-bottom: 15px;
 }
 
+.hourly-margin {
+  margin-top: 20px;
+}
+
 .review-btn {
   background-color: rgb(122, 60, 141);
 }
@@ -153,6 +157,11 @@ h1 {
 }
 
 .tutor-pic {
+  border-radius: 25px;
+  margin-top: 30px;
+}
+
+.taboola-pic {
   border-radius: 25px;
   margin-top: 30px;
 }

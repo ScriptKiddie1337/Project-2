@@ -11,8 +11,9 @@ $(document).ready(function() {
       $(".tutor-pic").attr("src", data.imageURL);
       $(".tutorName").html(" " + data.firstName + " " + data.lastName);
       $(".venmoDollars").html(" " + data.hourlyRate);
-      $(".venmoName").html("Venmo: @" + data.venmoName);
+      $(".venmoName").html("Venmo: " + data.venmoName);
       $("#postDescription").html(data.description);
+      $(".bookTutor").html(data.email);
     });
   }
 });
