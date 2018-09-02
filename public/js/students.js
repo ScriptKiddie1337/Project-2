@@ -8,10 +8,14 @@ $.get("/api/posts", function(data) {
   // Loops thru each tutor post and appends
   for (var i = 0; i < data.length; i++) {
     console.log(data[i].title);
+    var anchor = $("<a>");
+    anchor.attr("href", "/posts/" + (i + 1));
     var wellSection = $("<div>");
     wellSection.addClass("well");
     wellSection.attr("id", "tutorPost-" + i);
-    $("#eachPost").append(wellSection);
+    anchor.append(wellSection);
+    $("#eachPost").append(anchor);
+    // $("#eachPost").append(wellSection);
 
     $("#tutorPost-" + i).append(
       "<div class='card-panel teal lighten-3 row white-text tutorPreviewMargin'><h3 class='col s9 drop-shadow'>Title: " +
