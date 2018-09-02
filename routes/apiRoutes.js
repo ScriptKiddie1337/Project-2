@@ -3,18 +3,38 @@ var db = require("../models");
 module.exports = function(app) {
   //Return all Tutor Posts
   app.get("/api/posts", function(req, res) {
-    db.TutorPosts.findAll({}).then(function(results) {
-      res.status(200);
-      res.json(results).end();
-    });
+    db.TutorPosts.findAll({})
+      .then(function(results) {
+        res.status(200);
+        res.json(results).end();
+      })
+      .catch(function(err) {
+        if (
+          process.env.NODE_ENV === "test" ||
+          process.env.NODE_ENV === "development"
+        ) {
+          console.log(err);
+        }
+        res.status(500).end();
+      });
   });
 
   //Return all the Student Reviews
   app.get("/api/reviews", function(req, res) {
-    db.Reviews.findAll({}).then(function(results) {
-      res.status(200);
-      res.json(results).end();
-    });
+    db.Reviews.findAll({})
+      .then(function(results) {
+        res.status(200);
+        res.json(results).end();
+      })
+      .catch(function(err) {
+        if (
+          process.env.NODE_ENV === "test" ||
+          process.env.NODE_ENV === "development"
+        ) {
+          console.log(err);
+        }
+        res.status(500).end();
+      });
   });
 
   //Return all student reviews specifically for a Tutor Post
@@ -23,18 +43,38 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       }
-    }).then(function(results) {
-      res.status(200);
-      res.json(results).end();
-    });
+    })
+      .then(function(results) {
+        res.status(200);
+        res.json(results).end();
+      })
+      .catch(function(err) {
+        if (
+          process.env.NODE_ENV === "test" ||
+          process.env.NODE_ENV === "development"
+        ) {
+          console.log(err);
+        }
+        res.status(500).end();
+      });
   });
 
   //Return all Subjects, this should be used in create a post dropdown list
   app.get("/api/subjects", function(req, res) {
-    db.Subjects.findAll({}).then(function(results) {
-      res.status(200);
-      res.json(results);
-    });
+    db.Subjects.findAll({})
+      .then(function(results) {
+        res.status(200);
+        res.json(results);
+      })
+      .catch(function(err) {
+        if (
+          process.env.NODE_ENV === "test" ||
+          process.env.NODE_ENV === "development"
+        ) {
+          console.log(err);
+        }
+        res.status(500).end();
+      });
   });
 
   /*
@@ -54,28 +94,39 @@ module.exports = function(app) {
     Returns: Return Object Created on Status of 200
   */
   app.post("/api/post", function(req, res) {
-    db.TutorPosts.create(req.body).then(function(data) {
-      if (!data) {
-        res.status(400).end();
-      } else {
-        res.status(200);
-        res.json(data).end();
-      }
-    });
+    db.TutorPosts.create(req.body)
+      .then(function(data) {
+        if (!data) {
+          res.status(400).end();
+        } else {
+          res.status(200);
+          res.json(data).end();
+        }
+      })
+      .catch(function(err) {
+        if (
+          process.env.NODE_ENV === "test" ||
+          process.env.NODE_ENV === "development"
+        ) {
+          console.log(err);
+        }
+        res.status(500).end();
+      });
   });
 
   /*
     Description: Update a Tutor Post
     Parameter:
     Body: {
-      firstName: string, [required]
-      lastName: string, [required]
-      venmoName: string, [required]
-      subject: string, [required]
-      imageURL: string, [optional]
-      description: string, [required]
-      hourlyRate: decimal (ex. 3.00) [required],
-      email: string [required]
+      id: int, [required]
+      firstName: string, 
+      lastName: string,
+      venmoName: string, 
+      subject: string, 
+      imageURL: string, 
+      description: string, 
+      hourlyRate: decimal (ex. 3.00),
+      email: string
     }
     Returns: AffectedRows > 0 on Status 200
   */
@@ -84,14 +135,24 @@ module.exports = function(app) {
       where: {
         id: req.body.id
       }
-    }).then(function(affectedRows) {
-      if (affectedRows === 0) {
-        res.status(400).end();
-      } else {
-        res.status(200);
-        res.json(affectedRows).end();
-      }
-    });
+    })
+      .then(function(affectedRows) {
+        if (affectedRows === 0) {
+          res.status(400).end();
+        } else {
+          res.status(200);
+          res.send(JSON.stringify(affectedRows)).end();
+        }
+      })
+      .catch(function(err) {
+        if (
+          process.env.NODE_ENV === "test" ||
+          process.env.NODE_ENV === "development"
+        ) {
+          console.log(err);
+        }
+        res.status(500).end();
+      });
   });
 
   /*
@@ -104,14 +165,24 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       }
-    }).then(function(affectedRows) {
-      if (affectedRows === 0) {
-        res.status(400).end();
-      } else {
-        res.status(200);
-        res.json(affectedRows).end();
-      }
-    });
+    })
+      .then(function(affectedRows) {
+        if (affectedRows === 0) {
+          res.status(400).end();
+        } else {
+          res.status(200);
+          res.json(JSON.stringify(affectedRows)).end();
+        }
+      })
+      .catch(function(err) {
+        if (
+          process.env.NODE_ENV === "test" ||
+          process.env.NODE_ENV === "development"
+        ) {
+          console.log(err);
+        }
+        res.status(500).end();
+      });
   });
 
   /*
@@ -126,14 +197,24 @@ module.exports = function(app) {
     Returns: AffectedRows > 0 on Status of 200
   */
   app.post("/api/review", function(req, res) {
-    db.Reviews.create(req.body).then(function(affectedRows) {
-      if (affectedRows === 0) {
-        res.status(400).end();
-      } else {
-        res.status(200);
-        res.json(affectedRows).end();
-      }
-    });
+    db.Reviews.create(req.body)
+      .then(function(affectedRows) {
+        if (affectedRows === 0) {
+          res.status(400).end();
+        } else {
+          res.status(200);
+          res.json(JSON.stringify(affectedRows)).end();
+        }
+      })
+      .catch(function(err) {
+        if (
+          process.env.NODE_ENV === "test" ||
+          process.env.NODE_ENV === "development"
+        ) {
+          console.log(err);
+        }
+        res.status(500).end();
+      });
   });
 
   /*
@@ -141,18 +222,28 @@ module.exports = function(app) {
     Parameter: id
     Returns: AffectedRows > 0 on Status 200
   */
-  app.delete("/api/review/:id", function(req, res) {
-    db.Reviews.destroy(req.body, {
+  app.delete("/api/reviews/:id", function(req, res) {
+    db.Reviews.destroy({
       where: {
         id: req.params.id
       }
-    }).then(function(affectedRows) {
-      if (affectedRows === 0) {
-        res.status(400).end();
-      } else {
-        res.status(200);
-        res.json(affectedRows).end();
-      }
-    });
+    })
+      .then(function(affectedRows) {
+        if (affectedRows === 0) {
+          res.status(400).end();
+        } else {
+          res.status(200);
+          res.json(JSON.stringify(affectedRows)).end();
+        }
+      })
+      .catch(function(err) {
+        if (
+          process.env.NODE_ENV === "test" ||
+          process.env.NODE_ENV === "development"
+        ) {
+          console.log(err);
+        }
+        res.status(500).end();
+      });
   });
 };
