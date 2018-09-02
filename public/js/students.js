@@ -9,7 +9,7 @@ $.get("/api/posts", function(data) {
   for (var i = 0; i < data.length; i++) {
     console.log(data[i].title);
     var anchor = $("<a>");
-    anchor.attr("href", "/posts/" + i);
+    anchor.attr("href", "/posts/" + (i + 1));
     var wellSection = $("<div>");
     wellSection.addClass("well");
     wellSection.attr("id", "tutorPost-" + i);
