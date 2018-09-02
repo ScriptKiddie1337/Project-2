@@ -19,27 +19,27 @@ module.exports = function(app) {
       });
   });
 
-  // Return specific tutor post
-  app.get("/api/posts/:id", function(req, res) {
-    db.TutorPosts.findOne({
-      where: {
-        id: req.params.id
-      }
-    })
-      .then(function(results) {
-        res.status(200);
-        res.json(results).end();
-      })
-      .catch(function(err) {
-        if (
-          process.env.NODE_ENV === "test" ||
-          process.env.NODE_ENV === "development"
-        ) {
-          console.log(err);
-        }
-        res.status(500).end();
-      });
-  });
+  // // Return specific tutor post
+  // app.get("/api/posts/:id", function(req, res) {
+  //   db.TutorPosts.findOne({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   })
+  //     .then(function(results) {
+  //       res.status(200);
+  //       res.json(results).end();
+  //     })
+  //     .catch(function(err) {
+  //       if (
+  //         process.env.NODE_ENV === "test" ||
+  //         process.env.NODE_ENV === "development"
+  //       ) {
+  //         console.log(err);
+  //       }
+  //       res.status(500).end();
+  //     });
+  // });
 
   //Return all the Student Reviews
   app.get("/api/reviews", function(req, res) {
