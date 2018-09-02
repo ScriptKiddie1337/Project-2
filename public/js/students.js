@@ -18,13 +18,15 @@ $.get("/api/posts", function(data) {
     // $("#eachPost").append(wellSection);
 
     $("#tutorPost-" + i).append(
-      "<h3 class='col s9'>Title: " + data[i].title + "</h3>"
-    );
-
-    $("#tutorPost-" + i).append("<i class='fas fa-money-bill-wave-alt'></i>");
-
-    $("#tutorPost-" + i).append(
-      "<h4 class='col s3'>$:" + data[i].hourlyRate + "</h4>"
+      "<div class='card-panel teal lighten-3 row white-text tutorPreviewMargin'><h3 class='col s9 drop-shadow'>Title: " +
+        data[i].title +
+        "</h3><h4 class='col s3 drop-shadow'>$: " +
+        data[i].hourlyRate +
+        "</h4><div class='row center'><div class='col s12'><a class='orange btn' href=/posts/" +
+        data[i].id +
+        ">Learn More</a><div class='col s6 left'><a class='orange btn' href=mailto:" +
+        data[i].email +
+        ">Book Appointment</a></div></div></div></div>"
     );
   }
 });
