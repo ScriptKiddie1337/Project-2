@@ -1,3 +1,6 @@
+var url = window.location.pathname;
+postId = url.split("posts/")[1];
+
 $("#reviewSubmit").on("click", function(event) {
   event.preventDefault();
 
@@ -6,7 +9,8 @@ $("#reviewSubmit").on("click", function(event) {
       .val()
       .trim(),
     rating: $("#reviewerRatingInput").val(),
-    text: $("#reviewerDescriptionInput").val()
+    text: $("#reviewerDescriptionInput").val(),
+    TutorPostId: postId
   };
 
   $.post("/api/review", newReview).then(function(data) {
