@@ -1,32 +1,97 @@
-$.get("/api/posts", function(data) {
-  console.log(data);
-  // Creates a div & col to use the grid system
-  var eachPost = $("<div>")
-    .addClass("col s12")
-    .attr("id", "eachPost");
-  $("#tutorPreview").append(eachPost);
-  // Loops thru each tutor post and appends
-  for (var i = 0; i < data.length; i++) {
-    console.log(data[i].title);
-    //var anchor = $("<a>");
-    //anchor.attr("href", "/posts/" + (i + 1));
-    var wellSection = $("<div>");
-    wellSection.addClass("well");
-    wellSection.attr("id", "tutorPost-" + i);
-    //anchor.append(wellSection);
-    //$("#eachPost").append(anchor);
-    $("#eachPost").append(wellSection);
-
-    $("#tutorPost-" + i).append(
-      "<div class='card-panel teal lighten-3 row white-text tutorPreviewMargin'><div class='valign-wrapper preview-inner-top'><h4 class='col s9'><i class='fas fa-file-signature'></i> " +
-        data[i].title +
-        "</h4><h5 class='col s3'><i class='fas fa-dollar-sign'></i>&nbsp" +
-        data[i].hourlyRate +
-        "&nbsp<i class='fas fa-credit-card'></i></h5></div><div class='row center'><div class='col s12'><a class='indigo btn' href=/posts/" +
-        data[i].id +
-        ">Learn More</a><div class='col s6 left'><a class='red accent-3 btn' href=mailto:" +
-        data[i].email +
-        ">Book Appointment</a></div></div></div></div>"
-    );
-  }
+$(document).ready(function() {
+  $.get("/api/subjects").then(function(data) {
+    var subjects = [];
+    for (var i = 0; i < data.length; i++) {
+      subjects.push(data[i].subjectName.toUpperCase());
+    }
+    $("#submit-button").on("click", function(event) {
+      event.preventDefault();
+      var searchSubject = $("#search-name")
+        .val()
+        .toUpperCase();
+      $("#search-name").val("");
+      $("#eachPost").empty();
+      $("#messageDisplay").empty();
+      if (subjects.includes(searchSubject)) {
+        $.get("/api/search/" + searchSubject, function(data) {
+          // Creates a div & col to use the grid system
+          var eachPost = $("<div>")
+            .addClass("col s12")
+            .attr("id", "eachPost");
+          $("#tutorPreview").append(eachPost);
+          // Loops thru each tutor post and appends
+          for (var i = 0; i < data.length; i++) {
+            var anchor = $("<a>");
+            anchor.attr("href", "/posts/" + (i + 1));
+            var wellSection = $("<div>");
+            wellSection.addClass("well");
+            wellSection.attr("id", "tutorPost-" + i);
+            anchor.append(wellSection);
+            $("#eachPost").append(anchor);
+            // $("#eachPost").append(wellSection);
+            $("#tutorPost-" + i).append(
+              "<div class='card-panel teal lighten-3 row white-text tutorPreviewMargin'><h3 class='col s9 drop-shadow'>Title: " +
+                data[i].title +
+                "</h3><h4 class='col s3 drop-shadow'>$: " +
+                data[i].hourlyRate +
+                "</h4><div class='row center'><div class='col s12'><a class='orange btn' href=/posts/" +
+                data[i].id +
+                ">Learn More</a><div class='col s6 left'><a class='orange btn' href=mailto:" +
+                data[i].email +
+                ">Book Appointment</a></div></div></div></div>"
+            );
+          }
+        });
+      } else {
+        if (!searchSubject) {
+          var message = $("<h4>")
+            .addClass("col s12")
+            .attr("id", "message")
+            .text(
+              "Please enter a subject name in the search bar. All current offerings:"
+            );
+          $("#messageDisplay").append(message);
+        } else {
+          var message = $("<h4>")
+            .addClass("col s12")
+            .attr("id", "message")
+            .text(
+              "Sorry we do not have any " +
+                searchSubject +
+                " tutor at the moment. All current offerings:"
+            );
+          $("#messageDisplay").append(message);
+        }
+        $.get("/api/posts", function(data) {
+          // Creates a div & col to use the grid system
+          var eachPost = $("<div>")
+            .addClass("col s12")
+            .attr("id", "eachPost");
+          $("#tutorPreview").append(eachPost);
+          // Loops thru each tutor post and appends
+          for (var i = 0; i < data.length; i++) {
+            var anchor = $("<a>");
+            anchor.attr("href", "/posts/" + (i + 1));
+            var wellSection = $("<div>");
+            wellSection.addClass("well");
+            wellSection.attr("id", "tutorPost-" + i);
+            anchor.append(wellSection);
+            $("#eachPost").append(anchor);
+            // $("#eachPost").append(wellSection);
+            $("#tutorPost-" + i).append(
+              "<div class='card-panel teal lighten-3 row white-text tutorPreviewMargin'><h3 class='col s9 drop-shadow'>Title: " +
+                data[i].title +
+                "</h3><h4 class='col s3 drop-shadow'>$: " +
+                data[i].hourlyRate +
+                "</h4><div class='row center'><div class='col s12'><a class='orange btn' href=/posts/" +
+                data[i].id +
+                ">Learn More</a><div class='col s6 left'><a class='orange btn' href=mailto:" +
+                data[i].email +
+                ">Book Appointment</a></div></div></div></div>"
+            );
+          }
+        });
+      }
+    });
+  });
 });
