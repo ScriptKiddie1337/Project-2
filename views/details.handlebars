@@ -27,13 +27,13 @@
       <h6 class="center"><b>Native Ads (Taboola)</b></h6>
       {{!-- Taboola native ads --}}
       <div class="row center">
-        <img id="defaultPic" class="tutor-pic" src="https://place-hold.it/125x125">
+        <img id="defaultPic" class="taboola-pic" src="https://place-hold.it/125x125">
       </div>
       <div class="row center">
-        <img id="defaultPic" class="tutor-pic" src="https://place-hold.it/125x125">
+        <img id="defaultPic" class="taboola-pic" src="https://place-hold.it/125x125">
       </div>
       <div class="row center">
-        <img id="defaultPic" class="tutor-pic" src="https://place-hold.it/125x125">
+        <img id="defaultPic" class="taboola-pic" src="https://place-hold.it/125x125">
       </div>
     </div>
       {{!-- Tutor Details Column --}}
@@ -65,12 +65,12 @@
                     {{!-- Tutor Posting Details --}}
                     <div class="col s8">
                       <div class="row lower-tutor-card-margin">
-                        <div class="col s6 white-text drop-shadow">
+                        <div class="col s6 white-text ">
                           <h3><i class="fas fa-address-card"><span class="tutorName"> {{tutorInfo.firstName}} {{tutorInfo.lastName}}</span></i></h3>
                           {{!-- firstName --}}
                           {{!-- lastName --}}
                         </div>
-                        <div class="col s6 white-text drop-shadow">
+                        <div class="col s6 white-text">
                           <h3 class="pay-margin"><i class="fas fa-money-bill-wave-alt"></i><span class="tutorName"> <span class="venmoDollars">{{tutorInfo.hourlyRate}}</span>/Hr</span></i></h3>
                           {{!-- hourlyRate --}}
                           <p><span class="venmoName">Venmo: @{{tutorInfo.venmoName}}</span></p>
@@ -78,9 +78,9 @@
                         </div> 
                       </div>
                       <div class="row">
-                        <div class="col">
+                        <div class="col s12">
                           <br>
-                          <p class="white description-text center">{{tutorInfo.description}}
+                          <p class="white description-text left">{{tutorInfo.description}}
                           </p>
                           {{!-- description --}}
                         </div>  
@@ -91,7 +91,7 @@
                 </div>
                  <div class="row">
                   <div class="col s12 center">
-                    <a class="red btn" href="mailto:Test@gmail.com">Book Me!
+                    <a class="red btn bookTutor" href="mailto:Test@gmail.com">Book Me!
                     </a>  
                   </div>
                 </div>
