@@ -18,7 +18,7 @@ $.get("/api/posts", function(data) {
     $("#eachPost").append(wellSection);
 
     $("#tutorPost-" + i).append(
-      "<div class='card-panel teal lighten-3 row white-text tutorPreviewMargin'><div class='valign-wrapper'><h4 class='col s9'><i class='fas fa-file-signature'></i> " +
+      "<div class='card-panel teal lighten-3 row white-text tutorPreviewMargin'><div class='valign-wrapper preview-inner-top'><h4 class='col s9'><i class='fas fa-file-signature'></i> " +
         data[i].title +
         "</h4><h5 class='col s3'><i class='fas fa-dollar-sign'></i>&nbsp" +
         data[i].hourlyRate +
