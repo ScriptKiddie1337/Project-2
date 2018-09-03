@@ -3,18 +3,15 @@ var db = require("../models");
 module.exports = function(app) {
   //Return all Tutor Posts
   app.get("/api/posts", function(req, res) {
-    db.TutorPosts.findAll({})
+    db.TutorPosts.findAll({
+      include: [db.Reviews]
+    })
       .then(function(results) {
         res.status(200);
         res.json(results).end();
       })
       .catch(function(err) {
-        if (
-          process.env.NODE_ENV === "test" ||
-          process.env.NODE_ENV === "development"
-        ) {
-          console.log(err);
-        }
+        console.log(err);
         res.status(500).end();
       });
   });
@@ -24,7 +21,8 @@ module.exports = function(app) {
   //   db.TutorPosts.findOne({
   //     where: {
   //       id: req.params.id
-  //     }
+  //     },
+  //    include: [db.Reviews]
   //   })
   //     .then(function(results) {
   //       res.status(200);
@@ -41,6 +39,23 @@ module.exports = function(app) {
   //     });
   // });
 
+  //Returns all TutorPosts based on a subject query
+  app.get("/api/search/:subject", function(req, res) {
+    db.TutorPosts.findAll({
+      where: {
+        subject: req.params.subject
+      }
+    })
+      .then(function(data) {
+        res.status(200);
+        res.json(data).end();
+      })
+      .catch(function(err) {
+        console.log(err);
+        res.status(500).end();
+      });
+  });
+
   //Return all the Student Reviews
   app.get("/api/reviews", function(req, res) {
     db.Reviews.findAll({})
@@ -49,12 +64,7 @@ module.exports = function(app) {
         res.json(results).end();
       })
       .catch(function(err) {
-        if (
-          process.env.NODE_ENV === "test" ||
-          process.env.NODE_ENV === "development"
-        ) {
-          console.log(err);
-        }
+        console.log(err);
         res.status(500).end();
       });
   });
@@ -71,12 +81,7 @@ module.exports = function(app) {
         res.json(results).end();
       })
       .catch(function(err) {
-        if (
-          process.env.NODE_ENV === "test" ||
-          process.env.NODE_ENV === "development"
-        ) {
-          console.log(err);
-        }
+        console.log(err);
         res.status(500).end();
       });
   });
@@ -89,12 +94,7 @@ module.exports = function(app) {
         res.json(results);
       })
       .catch(function(err) {
-        if (
-          process.env.NODE_ENV === "test" ||
-          process.env.NODE_ENV === "development"
-        ) {
-          console.log(err);
-        }
+        console.log(err);
         res.status(500).end();
       });
   });
@@ -126,12 +126,7 @@ module.exports = function(app) {
         }
       })
       .catch(function(err) {
-        if (
-          process.env.NODE_ENV === "test" ||
-          process.env.NODE_ENV === "development"
-        ) {
-          console.log(err);
-        }
+        console.log(err);
         res.status(500).end();
       });
   });
@@ -167,12 +162,7 @@ module.exports = function(app) {
         }
       })
       .catch(function(err) {
-        if (
-          process.env.NODE_ENV === "test" ||
-          process.env.NODE_ENV === "development"
-        ) {
-          console.log(err);
-        }
+        console.log(err);
         res.status(500).end();
       });
   });
@@ -197,12 +187,7 @@ module.exports = function(app) {
         }
       })
       .catch(function(err) {
-        if (
-          process.env.NODE_ENV === "test" ||
-          process.env.NODE_ENV === "development"
-        ) {
-          console.log(err);
-        }
+        console.log(err);
         res.status(500).end();
       });
   });
@@ -229,12 +214,7 @@ module.exports = function(app) {
         }
       })
       .catch(function(err) {
-        if (
-          process.env.NODE_ENV === "test" ||
-          process.env.NODE_ENV === "development"
-        ) {
-          console.log(err);
-        }
+        console.log(err);
         res.status(500).end();
       });
   });
@@ -259,12 +239,7 @@ module.exports = function(app) {
         }
       })
       .catch(function(err) {
-        if (
-          process.env.NODE_ENV === "test" ||
-          process.env.NODE_ENV === "development"
-        ) {
-          console.log(err);
-        }
+        console.log(err);
         res.status(500).end();
       });
   });
