@@ -55,9 +55,9 @@ module.exports = function(app) {
         res.status(500).end();
       });
     //update numOfSearches for subject searched
-    db.TutorPosts.update(
+    db.Subjects.update(
       {
-        numOfSearches: sequelize.literal("numOfSearches + 1")
+        numOfSearches: db.Sequelize.literal("numOfSearches + 1")
       },
       {
         where: {
