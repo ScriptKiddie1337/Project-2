@@ -4,12 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       notEmpty: true
     },
-    numOfSearches: {
-      type: DataTypes.INTEGER,
-      validate: {
-        isInt: true
-      }
-    }
+    numOfSearches: DataTypes.INTEGER
   });
   return Subjects;
 };
