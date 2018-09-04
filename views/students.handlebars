@@ -2,13 +2,14 @@
   {{!-- Header With Search--}}
   <div class="header">
     <div class="row search-margin">
-        <div class="col offset-s3 s6 search-bg-height valign-wrapper">
+      <form>
+        <div class="col offset-s3 s6 search-bg-height valign-wrapper input-field input-autocomplete">
+             <div class="col s2">
+                <a class="btn-floating btn-large waves-effect waves-light red" onclick="goBack()"><i class="fas fa-backward"></i></a>
+              </div>
             <div class="col s9">
-              <form>
-                <div class="input-field input-autocomplete">
-                  <i class="material-icons prefix purple-text">create</i>
-                  <input type="text" id="search-name" class="autocomplete" >
-                  <label for="autocomplete-input">Enter a subject name</label>
+                <div class="back-btn-margin">
+                  <input type="text" id="search-name" class="autocomplete">
                 </div>
               </div>
               <div class="col s3 valign-wrapper">

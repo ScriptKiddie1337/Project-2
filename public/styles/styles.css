@@ -91,6 +91,11 @@ h1 {
   padding-top: 20px;
 }
 
+.back-btn-margin {
+  border-left: solid 3px purple;
+  padding-left: 10px;
+}
+
 .preview-inner-top {
   margin-bottom: 20px;
   background-color: teal;
