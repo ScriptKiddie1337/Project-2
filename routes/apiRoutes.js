@@ -99,6 +99,22 @@ module.exports = function(app) {
       });
   });
 
+  //Return all Subjects, this should be used in create a post dropdown list
+  app.get("/api/subjects/top", function(req, res) {
+    db.Subjects.findAll({
+      limit: 5,
+      order: [["numOfSearches", "DESC"]]
+    })
+      .then(function(results) {
+        res.status(200);
+        res.json(results);
+      })
+      .catch(function(err) {
+        console.log(err);
+        res.status(500).end();
+      });
+  });
+
   /*
     ** UPDATED -- 8/29/2018 **
     Description: Create a new Tutor Post

@@ -17,7 +17,15 @@ module.exports = function(app) {
 
   //Displays the Student Portal
   app.get("/students", function(req, res) {
-    res.render("students");
+    db.Subjects.findAll({
+      limit: 5,
+      order: [["numOfSearches", "DESC"]]
+    }).then(function(results) {
+      res.status(200);
+      res.render("students", {
+        topSearches: results
+      });
+    });
   });
 
   //Displays the Tutor Post Details Page
