@@ -54,6 +54,17 @@ module.exports = function(app) {
         console.log(err);
         res.status(500).end();
       });
+    //update numOfSearches for subject searched
+    db.TutorPosts.update(
+      {
+        numOfSearches: sequelize.literal("numOfSearches + 1")
+      },
+      {
+        where: {
+          subjectName: req.params.subject
+        }
+      }
+    );
   });
 
   //Return all the Student Reviews
