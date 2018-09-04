@@ -2,17 +2,18 @@
   {{!-- Header With Search--}}
   <div class="header">
     <div class="row search-margin">
-        <div class="col offset-s3 s6 search-bg-height valign-wrapper">
+      <form>
+        <div class="col offset-s3 s6 search-bg-height valign-wrapper input-field input-autocomplete">
+             <div class="col s2">
+                <a class="btn-floating btn-large waves-effect waves-light red" onclick="goBack()"><i class="fas fa-backward"></i></a>
+              </div>
             <div class="col s9">
-              <form>
-                <div class="input-field input-autocomplete">
-                  <i class="material-icons prefix purple-text">create</i>
-                  <input type="text" id="autocomplete-input" class="autocomplete">
-                  <label for="autocomplete-input">Search Tutors</label>
+                <div class="back-btn-margin">
+                  <input type="text" id="search-name" class="autocomplete">
                 </div>
               </div>
               <div class="col s3 valign-wrapper">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <button class="btn waves-effect waves-light" type="submit" id="submit-button">Submit
                   <i class="material-icons right">class</i>
                 </button>
               </div>
@@ -25,40 +26,22 @@
     {{!-- Left Sidebar --}}
     <div class="col s2 white tag-margin">
       <h6 class="center"><b>Choose a Subject</b></h6>
+        <span class="topSearches"></span>
+        <ul>
+          {{#each topSearches}}
+              <div class="row center sidebar-margin">
+          <a class="waves-effect waves-light orange sidebar-btn btn">{{this.subjectName}}</a>
+        </div>
+          {{/each}}
+        </ul>
       {{!-- Static Subject Tag Buttons --}}
-      <div class="row center sidebar-margin">
-        <a class="waves-effect waves-light grey sidebar-btn btn">All Classes</a>
-      </div>
-      <div class="row center">
-        <a class="waves-effect waves-light red sidebar-btn btn">Algebra</a>
-      </div>
-      <div class="row center">
-        <a class="waves-effect waves-light green sidebar-btn btn">Calculus</a>
-      </div>
-      <div class="row center">
-        <a class="waves-effect waves-light light-green sidebar-btn btn">Statistics</a>
-      </div>
-            <div class="row center">
-        <a class="waves-effect waves-light indigo sidebar-btn btn">Economics</a>
-      </div>
-      <div class="row center">
-        <a class="waves-effect waves-light green sidebar-btn btn">Management</a>
-      </div>
-      <div class="row center">
-        <a class="waves-effect waves-light light-blue sidebar-btn btn">Entrepreneurship</a>
-      </div>
-            <div class="row center">
-        <a class="waves-effect waves-light red sidebar-btn btn">History</a>
-      </div>
-      <div class="row center">
-        <a class="waves-effect waves-light green sidebar-btn btn">Ethics</a>
-      </div>
-      <div class="row center">
-        <a class="waves-effect waves-light light-blue sidebar-btn btn">Art</a>
-      </div>
     </div>
+  
+            
+            
       {{!-- Tutor Preview Column --}}
       <div class="col s8 white tutor-col-margin">
+        <p id="messageDisplay"></p>
         {{!-- Tutor Preview Card --}}
         <div class="row">
           <div class="col s12">
