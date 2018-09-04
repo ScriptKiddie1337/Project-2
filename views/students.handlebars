@@ -26,19 +26,16 @@
     {{!-- Left Sidebar --}}
     <div class="col s2 white tag-margin">
       <h6 class="center"><b>Choose a Subject</b></h6>
-      <span class="topSearches"></span>
-      <ul>
-        {{#each topSearches}}
-            <div class="row center sidebar-margin">
-        <a class="waves-effect waves-light orange sidebar-btn btn">{{this.subjectName}}</a>
-      </div>
-        {{/each}}
-      </ul>
+        <span class="topSearches"></span>
+        <ul>
+          {{#each topSearches}}
+              <div class="row center sidebar-margin">
+          <a class="waves-effect waves-light orange sidebar-btn btn">{{this.subjectName}}</a>
+        </div>
+          {{/each}}
+        </ul>
       {{!-- Static Subject Tag Buttons --}}
     </div>
-  
-            
-            
       {{!-- Tutor Preview Column --}}
       <div class="col s8 white tutor-col-margin">
         <p id="messageDisplay"></p>
