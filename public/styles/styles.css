@@ -22,8 +22,10 @@ hr {
 
 /* Header */
 .header {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23bfacdd' fill-opacity='0.75'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
-  background-color: rgb(122, 60, 141);
+  /* Old bg configuration */
+  /*  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23bfacdd' fill-opacity='0.75'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E"); */
+  /* background-color: rgb(122, 60, 141); */
+  background-image: url("/images/bg.svg");
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -31,12 +33,23 @@ hr {
   min-height: 200px;
 }
 
+.logo-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 70px;
+  border: 3px solid #009c8a;
+}
+
 h1 {
   margin-top: 0;
 }
 
 .drop-shadow {
-    text-shadow: 4px 4px #000000;
+  text-shadow: 2px 4px #000000;
+}
+
+.drop-shadow-index-buttons {
+  text-shadow: 2px 4px #ffffff;
 }
 
 /* Main Content */
@@ -46,12 +59,32 @@ h1 {
 }
 
 /* Index Content */
-#tutorPortal,
+#tutorPortal {
+  text-align: center;
+  min-height: 150px;
+  line-height: 150px;
+  font-size: 3em;
+  background-color: #ffee00;
+  padding-bottom: 1px;
+}
+
+
 #studentPortal {
   text-align: center;
   min-height: 150px;
   line-height: 150px;
   font-size: 3em;
+  background-color: #009c8a;
+}
+
+.studentRow {
+  margin-bottom: 0px;
+  padding-left: 10px;
+}
+
+.button-img {
+  height: 100px;
+  width: 100px;
 }
 
 
@@ -68,7 +101,40 @@ h1 {
   margin-bottom: 0px;
 }
 
+#search-name {
+  height: 50px;
+}
+
+#submit-button {
+  height: 70px;
+  margin-top: 45px;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+.back-button {
+  margin-top: 45px;
+  margin-right: 10px;
+  border-radius: 5px;
+  height: 70px;
+}
+
+.back-btn-icon {
+  padding-top: 15px;
+}
+
+.back-btn-margin {
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
 /* Body */
+.grey-bg {
+  background-color: rgb(180, 180, 180);
+  margin-bottom: 0px;
+}
+
 .student-body {
   min-height: 800px;
 }
@@ -91,9 +157,12 @@ h1 {
   padding-top: 20px;
 }
 
-.back-btn-margin {
-  border-left: solid 3px purple;
-  padding-left: 10px;
+.pagination-row {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  margin-top: 10px;
+
 }
 
 .preview-inner-top {
@@ -126,7 +195,7 @@ h1 {
 }
 
 .review-border {
-  border-left: solid 5px rgb(122, 60, 141);
+  border-left: solid 2px rgb(122, 60, 141);
 }
 
 .listing-scroll {
@@ -147,7 +216,7 @@ h1 {
 }
 
 .page-footer {
-  background-color: rgb(122, 60, 141);
+  background-color: #7109b2;
   min-height: 50px;
   line-height: 50px;
 }
@@ -198,8 +267,20 @@ h1 {
 
 .tutor-info-card {
   margin-top: 50px;
-  margin-left: 50px;
-  background-color: rgba(122, 60, 141, 0.548);
+  padding-top: 5px;
+  background-color: #ffee00;
+}
+
+.tutor-button {
+  background-color: #ffee00;
+}
+
+.student-button {
+  background-color: #009c8a;
+}
+
+.tutor-li-margin {
+  margin-bottom: 5px;
 }
 
 .lower-tutor-card-margin {
@@ -238,4 +319,8 @@ h1 {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 0px;
+}
+
+.yellow-icon {
+  color: #ffee00;
 }

@@ -2,90 +2,64 @@
   {{!-- Header With Search--}}
   <div class="header">
     <div class="row search-margin">
+      <div class="col s2">
+        <a href="/">
+          <img class="logo-img hoverable" src="/images/logo.png">
+        </a>
+      </div>
       <form>
-        <div class="col offset-s3 s6 search-bg-height valign-wrapper input-field input-autocomplete">
-             <div class="col s2">
-                <a class="btn-floating btn-large waves-effect waves-light red" onclick="goBack()"><i class="fas fa-backward"></i></a>
+        <div class="col s8 valign-wrapper input-field input-autocomplete">
+          <div class="col offset-s1 s10">
+            <div class="back-btn-margin white">
+              <input type="text" id="search-name" class="autocomplete">
+            </div>
+          </div>
+          <div class="col s2">
+            <div class="row">
+              <div class="col s6">
+                <a class="btn waves-effect waves-light red accent-2 hoverable back-button back-btn-icon" onclick="goBack()"> <i class="fas fa-backward"></i></a>
               </div>
-            <div class="col s9">
-                <div class="back-btn-margin">
-                  <input type="text" id="search-name" class="autocomplete">
-                </div>
-              </div>
-              <div class="col s3 valign-wrapper">
-                <button class="btn waves-effect waves-light" type="submit" id="submit-button">Submit
-                  <i class="material-icons right">class</i>
+              <div class="col s6">
+                <button class="btn waves-effect waves-light cyan lighten-2 hoverable" type="submit" id="submit-button"><i class="fas fa-search"></i>
                 </button>
               </div>
-            </form> 
-        </div>
+            </div>
+          </div>
+        </form> 
       </div>
+    </div>
   </div>
   {{!-- Body --}}
   <div class="row">
     {{!-- Left Sidebar --}}
-    <div class="col s2 white tag-margin">
+    <div class="col s2 tag-margin">
       <h6 class="center"><b>Choose a Subject</b></h6>
         <span class="topSearches"></span>
         <ul>
           {{#each topSearches}}
-              <div class="row center sidebar-margin">
-          <a class="waves-effect waves-light orange sidebar-btn btn">{{this.subjectName}}</a>
-        </div>
+            <div class="row center sidebar-margin">
+              <a class="waves-effect waves-light purple sidebar-btn btn hoverable">{{this.subjectName}}</a>
+            </div>
           {{/each}}
         </ul>
-      {{!-- Static Subject Tag Buttons --}}
     </div>
-  
-            
-            
-      {{!-- Tutor Preview Column --}}
-      <div class="col s8 white tutor-col-margin">
+      {{!-- Center bar - Tutor Preview Column --}}
+      <div class="col s8 tutor-col-margin">
         <p id="messageDisplay"></p>
-        {{!-- Tutor Preview Card --}}
         <div class="row">
           <div class="col s12">
-            {{!-- #each tutorPreview --}}
             <div id="tutorPreview">
-              {{!-- <div class="row">
-                <div class="col s12">
-                  <div class="row form-margin valign-wrapper">
-                    <div class="col s9">
-                      <h3><span>Algebra 4 Tutor For Hire</span></h3>
-                    </div>
-                    <div class="col s3">
-                      <h4>
-                        <i class="fas fa-money-bill-wave-alt"></i>
-                        <span>25</span>/Hr
-                      </h4>
-                    </div>
-                  </div>
-                </div>
-              </div> --}}
             </div>
-            {{!-- /each --}}
           </div>
         </div>
-    </div>
+        </div>
     {{!-- Right Sidebar --}}
-    <div class="col s2 white center">
+    <div class="col s2 center">
       <img class="ad-margin"src="https://place-hold.it/150x500">
     </div>
   </div>
 </div>
-  <div class="row">
-    <div class="col s12 center">
-      <ul class="pagination">
-        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-        <li class="active teal lighten-3"><a href="#!">1</a></li>
-        <li class="waves-effect"><a href="#!">2</a></li>
-        <li class="waves-effect"><a href="#!">3</a></li>
-        <li class="waves-effect"><a href="#!">4</a></li>
-        <li class="waves-effect"><a href="#!">5</a></li>
-        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-      </ul>
-    </div>  
-  </div>
+
 {{!-- Footer --}}
 <footer class="page-footer">
     <div class="row footer-fix">
@@ -93,7 +67,7 @@
       </p>
       <div class="col offset-s2 s3 center button-fix">
       Tutor? Sign Up Here! &nbsp 
-      <a href="/tutors" class="waves-effect waves-light orange btn"><i class="fas fa-thumbtack"></i> Post a Lesson</a>
+      <a href="/tutors" class="waves-effect waves-light tutor-button btn grey-text hoverable">Post a Lesson</a>
       </div>
     </div>  
 </footer>

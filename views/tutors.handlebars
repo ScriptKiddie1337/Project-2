@@ -1,112 +1,150 @@
 <div class="wrapper">
   {{!-- Header --}}
   <div class="header">
-    <h1 class="title tutor-h1-margin drop-shadow"><i class="fas fa-thumbtack"></i> Post A Lesson</h1>
+     <div class="row valign-wrapper">
+      <div class="col s2">
+        <a href="/">
+          <img class="logo-img hoverable" src="/images/logo.png">
+        </a>
+      </div>
+      <div class="col offset-s1 s9 tutor-h1-margin">
+        <div class="row">
+          <div class="col s8">
+            <h1 class="drop-shadow">Post a Lesson</h1>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
 {{!-- Body --}}
   <div class="row">
     {{!-- Left Sidebar --}}
-    <div class="col s3 white valign-wrapper">
+    <div class="col s3 white">
       <div class="card-panel tutor-info-card">
-        <h5><u><i class="fas fa-info-circle"></i> How it Works:</u></h5>
-        <p>Become a Tutor In your area and start earning extra cash.</p>
+        <h5><u>How it Works:</u></h5>
+        <p>Discover how you can earn more income using the knowledge you already have.</p>
         <br>
-        <p>Simply fill out the card information to be contacted via email.</p>
+        <p>Become a tutor today and start leveraging your knowledge for cash</p>
         <br>
-        <p><i>Don't forget to post your price!</i></p>
+        <p>To get started, simply fill out the contact information, your skillset, and venmo to get instant access to students in need.</p>
+        <br>
+        <p><u>Fill Out:</u></p>
+        <br>
+        <ol>
+          <li class="tutor-li-margin">
+            First and Last Name
+          </li>
+          <li class="tutor-li-margin">
+            Email (so that the students can contact you)
+          </li>
+          <li class="tutor-li-margin">
+            Tutoring Subjects - Which areas are you an expert at?
+          </li>
+          <li class="tutor-li-margin">
+            Your @Venmo name.  Never used venmo?  <a href="https://venmo.com/">Sign up here!</a>
+          </li>
+          <li class="tutor-li-margin">
+            $xx/hr. Your hourly rate.  Don't sell yourself short!
+          </li>
+          <li class="tutor-li-margin">
+            Job Title - Tell your students what you are offering
+          </li>
+          <li class="tutor-li-margin">
+            Job Description - Explain in greater detail what kind of tutoring you offer and how you plan to teach your students.
+          </li>
+        </ol>
       </div>  
     </div>
       {{!-- Tutor Listing Card --}}
       <div class="col s7 white tutor-card-margin">
-      <div class="row">
-        <div class="col s12">
-          <div class="card-panel" id="tutorForm">
-            <div class="row">
-              <form class="col s12">
-                <div class="row form-margin">
-                  {{!-- Upload Picture --}}
-                  <div class="col s4 center upper-right-form-margin">
-                    <div class="row">
-                      <div class="col s12">
-                        <img id="defaultPic" src="https://place-hold.it/150x150">
-                      </div>
-                      <div class="row">
-                        <div class="col offset-s1 s10 url-margin">
-                          <div class="input-field">
-                            <textarea id="tutor_url" class="materialize-textarea"></textarea>
-                            <label for="tutor_url"><i class="fas fa-camera-retro"></i> Profile URL</label>
+        <div class="row">
+          <div class="col s12">
+            <div class="card-panel" id="tutorForm">
+              <div class="row">
+                <form class="col s12">
+                  <div class="row form-margin">
+                    {{!-- Upload Picture --}}
+                    <div class="col s4 center upper-right-form-margin">
+                      <div class="row form-margin">
+                        <div class="col s12">
+                          <img id="defaultPic" src="/images/student.png">
+                        </div>
+                        <div class="row">
+                          <div class="col offset-s1 s10 url-margin">
+                            <div class="input-field">
+                              <textarea id="tutor_url" class="materialize-textarea"></textarea>
+                              <label for="tutor_url"><i class="fas fa-camera-retro"></i> Profile URL</label>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>  
+                      </div>  
+                    </div>
+                    {{!-- Fill Out Form --}}
+                    <div class="col s8">
+                        <div class="row lower-tutor-card-margin">
+                            <div class="input-field col s6">
+                              <input id="tutor_first_name" type="text" class="validate">
+                              <label for="tutor_first_name"><i class="fas fa-address-card"></i> First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="tutor_last_name" type="text" class="validate">
+                              <label for="tutor_last_name"><i class="fas fa-address-card"></i> Last Name</label>
+                            </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                              <input id="tutor_email" type="email" class="validate">
+                              <label for="tutor_email"><i class="fas fa-envelope-square"></i> Email Address</label>
+                            </div>
+                            <div class="input-field col s12" id="tag">
+                              <select>
+                                  <option value="" disabled>Choose Your Area of Expertise</option>
+                                  <option value="1">Algebra</option>
+                                  <option value="2">Calculus</option>
+                                  <option value="3">Statistics</option>
+                                  <option value="4">Economics</option>
+                                  <option value="5">Management</option>
+                                  <option value="6">Entrepreneurship</option>
+                                  <option value="7">History</option>
+                                  <option value="8">Ethics</option>
+                                  <option value="9">Art</option>
+                                </select>
+                              <label><i class="fas fa-pencil-ruler"></i> Tutoring Subject(s)</label>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                   </div>
-                  {{!-- Fill Out Form --}}
-                  <div class="col s8">
-                      <div class="row lower-tutor-card-margin">
-                          <div class="input-field col s6">
-                            <input id="tutor_first_name" type="text" class="validate">
-                            <label for="tutor_first_name"><i class="fas fa-address-card"></i> First Name</label>
-                          </div>
-                          <div class="input-field col s6">
-                            <input id="tutor_last_name" type="text" class="validate">
-                            <label for="tutor_last_name"><i class="fas fa-address-card"></i> Last Name</label>
-                          </div>
-                      <div class="row">
-                          <div class="input-field col s12">
-                            <input id="tutor_email" type="email" class="validate">
-                            <label for="tutor_email"><i class="fas fa-envelope-square"></i> Email Address</label>
-                          </div>
-                          <div class="input-field col s12" id="tag">
-                            <select>
-                                <option value="" disabled>Choose Your Area of Expertise</option>
-                                <option value="1">Algebra</option>
-                                <option value="2">Calculus</option>
-                                <option value="3">Statistics</option>
-                                <option value="4">Economics</option>
-                                <option value="5">Management</option>
-                                <option value="6">Entrepreneurship</option>
-                                <option value="7">History</option>
-                                <option value="8">Ethics</option>
-                                <option value="9">Art</option>
-                              </select>
-                            <label><i class="fas fa-pencil-ruler"></i> Tutoring Subject(s)</label>
-                          </div>
-                        </div>
-                      </div>
+                  <div class="row form-margin">
+                    <div class="input-field col s6">
+                      <textarea id="venmo" class="materialize-textarea"></textarea>
+                      <label for="venmo"><i class="fas fa-money-bill-wave-alt"></i> @venmo Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <textarea id="price" class="materialize-textarea"></textarea>
+                      <label for="price"><i class="fas fa-dollar-sign"></i> xx/hr</label>
+                    </div>
+                  </div>  
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="job-title" class="materialize-textarea"></textarea>
+                    <label for="job-title"><i class="fas fa-sign"></i> Job Title</label>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="input-field col s6">
-                    <textarea id="venmo" class="materialize-textarea"></textarea>
-                    <label for="venmo"><i class="fas fa-money-bill-wave-alt"></i> @venmo Name</label>
+                  <div class="input-field col s12">
+                    <textarea id="jobDescription" class="materialize-textarea"></textarea>
+                    <label for="jobDescription"><i class="fas fa-align-left"></i> Job Description</label>
                   </div>
-                  <div class="input-field col s6">
-                    <textarea id="price" class="materialize-textarea"></textarea>
-                    <label for="price"><i class="fas fa-dollar-sign"></i> xx/hr</label>
-                  </div>
-                </div>  
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea id="job-title" class="materialize-textarea"></textarea>
-                  <label for="job-title"><i class="fas fa-sign"></i> Job Title</label>
                 </div>
-              </div>
-              <div class="row">
-                 <div class="input-field col s12">
-                  <textarea id="jobDescription" class="materialize-textarea"></textarea>
-                  <label for="jobDescription"><i class="fas fa-align-left"></i> Job Description</label>
+                <div class="row center">
+                  <button class="btn waves-effect waves-light hoverable tutor-button grey-text" type="submit" name="action" id="postSubmit">Post a Lesson
+                  </button>
                 </div>
-              </div>
-              <div class="row center">
-                <button class="btn waves-effect waves-light hoverable orange" type="submit" name="action" id="postSubmit"><i class="fas fa-thumbtack"></i> Post a Lesson
-                </button>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
     </div>
     {{!-- Right Sidebar --}}
     <div class="col s2 white left">
@@ -121,7 +159,7 @@
       </p>
       <div class="col offset-s1 s4 center button-fix">
       Student? Hire Tutors Here! &nbsp 
-      <a href="/students" class="waves-effect waves-light light-blue btn">View Tutor Listings</a>
+      <a href="/students" class="waves-effect waves-light student-button btn">View Tutor Listings</a>
       </div>
     </div>  
 </footer>

@@ -1,6 +1,17 @@
 # Project-2
 Project 2
 
+### Style Guide
+
+#Main Styles
+Purple Background: #7109b2
+Tutor Yellow: #ffee00
+Student Green (dark): #009c8a
+
+#Icon Styles
+Grey: #c3c3c3
+Light skin: #ffe0bd
+
 # Project Requirements
 
 This document outlines the base requirements for Project 2.
