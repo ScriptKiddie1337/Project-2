@@ -324,3 +324,12 @@ h1 {
 .yellow-icon {
   color: #ffee00;
 }
+
+#reviewSection {
+  height: 295px;
+  overflow-y: auto;
+}
+
+#reviewer {
+  margin-top: 5px;
+}
