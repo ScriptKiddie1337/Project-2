@@ -38,4 +38,6 @@ $("#postSubmit").on("click", function(event) {
   $("#price").val("");
   $("#jobDescription").val("");
   $("#job-title").val("");
+
+  window.location.href = "/students";
 });
