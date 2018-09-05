@@ -30,15 +30,15 @@ $(document).ready(function() {
             $("#eachPost").append(anchor);
             // $("#eachPost").append(wellSection);
             $("#tutorPost-" + i).append(
-              "<div class='card-panel teal lighten-3 row white-text tutorPreviewMargin'><div class='col s12'><div class='row valign-wrapper teal'><h4 class='col s9'>" +
+              "<div class='card-panel teal lighten-3 row white-text tutorPreviewMargin'><div class='col s12'><div class='row valign-wrapper teal'><h4 class='col s9'><i class='fas fa-chalkboard'></i> " +
                 data[i].title +
                 "</h4><h4 class='col s3'>$: " +
                 data[i].hourlyRate +
-                "</h4></div></div><div class='row center'><div class='col s6'><a class='blue btn' href=/posts/" +
+                "</h4></div></div><div class='row center'><div class='col s6'><a class='red btn' href=/posts/" +
                 data[i].id +
-                ">Learn More</a></div><div class='col s6 left'><a class='orange btn' href=mailto:" +
+                ">Learn More</a></div><div class='col s6 left'><a class='red btn' href=mailto:" +
                 data[i].email +
-                ">Book Appointment</a></div></div></div></div>"
+                "><i class='fas fa-calendar-check'></i> Book Appointment</a></div></div></div></div>"
             );
           }
         });
@@ -79,15 +79,15 @@ $(document).ready(function() {
             $("#eachPost").append(anchor);
             // $("#eachPost").append(wellSection);
             $("#tutorPost-" + i).append(
-              "<div class='card-panel teal lighten-3 row white-text tutorPreviewMargin'><div class='col s12'><div class='row valign-wrapper teal'><h4 class='col s9'>" +
+              "<div class='card-panel teal lighten-3 row white-text tutorPreviewMargin'><div class='col s12'><div class='row valign-wrapper teal'><h4 class='col s9'><i class='fas fa-chalkboard'></i> " +
                 data[i].title +
                 "</h4><h4 class='col s3'>$: " +
                 data[i].hourlyRate +
-                "</h4></div></div><div class='row center'><div class='col s6'><a class='blue btn' href=/posts/" +
+                "</h4></div></div><div class='row center'><div class='col s6'><a class='red btn' href=/posts/" +
                 data[i].id +
-                ">Learn More</a></div><div class='col s6 left'><a class='orange btn' href=mailto:" +
+                ">Learn More</a></div><div class='col s6 left'><a class='red btn' href=mailto:" +
                 data[i].email +
-                ">Book Appointment</a></div></div></div></div>"
+                "><i class='fas fa-calendar-check'></i> Book Appointment</a></div></div></div></div>"
             );
           }
         });
