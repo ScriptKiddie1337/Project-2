@@ -2,23 +2,31 @@
   {{!-- Header With Search--}}
   <div class="header">
     <div class="row search-margin">
+      <div class="col s2">
+        <a href="/">
+          <img class="logo-img hoverable" src="/images/logo.png">
+        </a>
+      </div>
       <form>
-        <div class="col offset-s3 s6 search-bg-height valign-wrapper input-field input-autocomplete">
-             <div class="col s2">
-                <a class="btn-floating btn-large waves-effect waves-light red" onclick="goBack()"><i class="fas fa-backward"></i></a>
+        <div class="col s8 valign-wrapper input-field input-autocomplete">
+          <div class="col offset-s1 s10">
+            <div class="back-btn-margin white">
+              <input type="text" id="search-name" class="autocomplete">
+            </div>
+          </div>
+          <div class="col s2">
+            <div class="row">
+              <div class="col s6">
+                <a class="btn waves-effect waves-light red accent-2 hoverable back-button back-btn-icon" onclick="goBack()"> <i class="fas fa-backward"></i></a>
               </div>
-            <div class="col s9">
-                <div class="back-btn-margin">
-                  <input type="text" id="search-name" class="autocomplete">
-                </div>
-              </div>
-              <div class="col s3 valign-wrapper">
-                <button class="btn waves-effect waves-light" type="submit" id="submit-button">Submit
-                  <i class="material-icons right">class</i>
+              <div class="col s6">
+                <button class="btn waves-effect waves-light cyan lighten-2 hoverable" type="submit" id="submit-button"><i class="fas fa-search"></i>
                 </button>
               </div>
-            </form> 
-        </div>
+            </div>
+          </div>
+        </form> 
+      </div>
       </div>
   </div>
   {{!-- Body --}}
@@ -66,24 +74,30 @@
                     {{!-- Tutor Posting Details --}}
                     <div class="col s8">
                       <div class="row lower-tutor-card-margin">
-                        <div class="col s6 white-text ">
-                          <h3><i class="fas fa-address-card"><span class="tutorName"> {{tutorInfo.firstName}} {{tutorInfo.lastName}}</span></i></h3>
-                          {{!-- firstName --}}
-                          {{!-- lastName --}}
+                        <div class="col s6 white-text">
+                          <h3><i class="fas yellow-icon fa-address-card"></i><span class="tutorName"> {{tutorInfo.firstName}} {{tutorInfo.lastName}}</span></h3>
                         </div>
                         <div class="col s6 white-text">
-                          <h3 class="pay-margin"><i class="fas fa-money-bill-wave-alt"></i><span class="tutorName"> <span class="venmoDollars">{{tutorInfo.hourlyRate}}</span>/Hr</span></i></h3>
                           {{!-- hourlyRate --}}
-                          <p><span class="venmoName">Venmo: @{{tutorInfo.venmoName}}</span></p>
-                          {{!-- venmoName --}}
+                          <h3 class="pay-margin"><span class="tutorName"><span class="yellow-icon">$:</span> <span class="venmoDollars">{{tutorInfo.hourlyRate}}</span> / Hr</span></i></h3>
                         </div> 
                       </div>
                       <div class="row">
                         <div class="col s12">
                           <br>
-                          <p class="white description-text left">{{tutorInfo.description}}
-                          </p>
-                          {{!-- description --}}
+                          {{!-- venmoName --}}
+                          <div class="row">
+                            <div class="col s12">
+                              <p><span class="venmoName description-text purple "><span class="yellow-icon">@Venmo:</span> {{tutorInfo.venmoName}}</span></p>
+                            </div>
+                          </div>
+                          {{!-- Job Description --}}
+                          <div class="row">
+                            <div class="col s12">
+                              <p class="white description-text left">{{tutorInfo.description}}
+                              </p> 
+                            </div>
+                          </div>
                         </div>  
                       </div>
                       </div>
@@ -92,7 +106,7 @@
                 </div>
                  <div class="row">
                   <div class="col s12 center">
-                    <a class="red btn bookTutor" href="mailto:Test@gmail.com">Book Me!
+                    <a class="red btn bookTutor" id="bookTutor" href="mailto:Test@gmail.com">Book Me!
                     </a>  
                   </div>
                 </div>
@@ -100,23 +114,23 @@
                 <div class="row">
                   <ul class="collapsible review-collapsible">
                     <li>
-                      <div class="collapsible-header white-text teal darken-1"><i class="fas fa-arrow-circle-down"></i>See What People Are Saying</div>
+                      <div class="collapsible-header white-text teal darken-1"><i class="fas fa-arrow-circle-down yellow-icon"></i>See What People Are Saying</div>
                       <div class="collapsible-body white">
                         <div class="row">
                 <div class="col s6">
                   <div class="row">
                     <div class="col s6">
-                      <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
-                      <p><span class="reviewerDescription">Bla bla bla blab la blab labl Bla bla bla blab la blab lablBla bla bla blab la blab lablBla bla bla blab la blab labl</span></p>
+                      <h6><span class="reviewerName"><b>John Smith</b></span></h6>
+                      <p><span class="reviewerDescription">Wonderful Tutor, will book many times over</span></p>
                     </div>
                     <div class="col s6">
-                      <h6><span class="reviewerName"><b>Tutor Review Name</b></span></h6>
-                      <p><span class="reviewerDescription">Bla bla bla blab la blab lablBla bla bla blab la blab lablBla bla bla blab la blab labl</span></p>
+                      <h6><span class="reviewerName"><b>Madge Johnson</b></span></h6>
+                      <p><span class="reviewerDescription">Worst tutor I have ever had.  Did so bad I got a Z... didn't even know that grade existed.</span></p>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col s12">
-                      <a class="waves-effect waves-light btn-small">See All Reviews
+                    <div class="col offset-s3 s9">
+                      <a class="waves-effect waves-light red btn-small">See All Reviews
                       </a>  
                     </div>
                   </div>
@@ -146,15 +160,14 @@
                     </div>
                 </form>
               </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-            </div>{{!-- card panel --}}
-          </div>
-        </div>{{!-- row --}} 
-      {{!-- /each --}}
-    </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+  </div>{{!-- card panel --}}
+</div>
+</div>{{!-- row --}} 
+</div>
     {{!-- Right Sidebar --}}
     <div class="col s2 white center">
       <img class="ad-margin"src="https://place-hold.it/150x500">
@@ -168,7 +181,7 @@
       </p>
       <div class="col offset-s1 s4 center button-fix">
       Student? Hire Tutors Here! &nbsp 
-      <a href="/students" class="waves-effect waves-light light-blue btn">View Tutor Listings</a>
+      <a href="/students" class="waves-effect waves-light student-button hoverable btn">View Tutor Listings</a>
       </div>
     </div>  
 </footer>

@@ -1,26 +1,49 @@
 <div class="wrapper bg">
   {{!-- Header --}}
   <div class="header">
-    <h1 class="title drop-shadow"><i class="fas fa-graduation-cap"></i> Tutorific</h1>
-    <h4 class="sub-title drop-shadow">Learn. Teach. Get Paid.</h4>
+    <div class="row">
+      <div class="col s2">
+        <a href="/">
+          <img class="logo-img hoverable" src="/images/logo.png">
+        </a>
+      </div>
+      <div class="col offset-s1 s9">
+        <div class="row">
+          <div class="col s8">
+            <h1 class="title drop-shadow">Tutorific</h1>
+            <h4 class="sub-title drop-shadow">Learn. Teach. Get Paid.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   {{!-- Body --}}
   <div class="row main">
     {{!-- Tutor Card Panel --}}
     <div class="col s4 offset-s1">
       <a href="/tutors">
-        <div class="card-panel orange lighten-2 hoverable" id="tutorPortal">
-          <span class="white-text drop-shadow"><i class="fas fa-chalkboard-teacher"></i> Tutor Portal
-          </span>
+        <div class="card-panel hoverable" id="tutorPortal">
+          <div class="row">
+            <div class="col offset-s1 s11 valign-wrapper">
+              <img class="button-img" src="/images/tutor.png">
+              <span class="grey-text drop-shadow-index-buttons">Tutor Portal
+              </span>
+            </div>
+          </div>
         </div>
       </a>
     </div>
   {{!-- Student Card Panel --}}
     <div class="col s4 offset-s1 push-s1">
       <a href="/students">
-        <div class="card-panel light-blue lighten-2 hoverable" id="studentPortal">
-          <span class="white-text drop-shadow"><i class="fas fa-book"></i> Student Portal
-          </span>
+        <div class="card-panel hoverable" id="studentPortal">
+          <div class="row studentRow">
+            <div class="col s12 valign-wrapper">
+              <img class="button-img" src="/images/student.png">
+              <span class="grey-text drop-shadow">Student Portal
+              </span>
+            </div>
+          </div>
         </div>
       </a>
     </div>
