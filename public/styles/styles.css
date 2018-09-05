@@ -239,3 +239,8 @@ h1 {
   margin-bottom: 10px;
   padding: 0px;
 }
+
+#reviewSection {
+  max-height: 300px;
+  overflow-y: auto;
+}
