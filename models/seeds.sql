@@ -1,4 +1,4 @@
-use beyojx2kctqx2t5o
+use tutorific_db
 
 INSERT INTO Subjects (subjectName,numOfSearches,createdAt,updatedAt)
 VALUES ("Math",3,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);
