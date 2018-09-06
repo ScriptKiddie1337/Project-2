@@ -110,7 +110,7 @@ $(document).ready(function() {
     // When subject buttons are clicked
     $(".subjectBtn").on("click", function() {
       var searchSubject = $(this)[0].name.toUpperCase();
-      console.log(searchSubject);
+      //console.log(searchSubject);
       $("#eachPost").empty();
       $("#messageDisplay").empty();
       if (subjects.includes(searchSubject)) {
