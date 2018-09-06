@@ -1,5 +1,30 @@
-# Project-2
-Project 2
+# Tutorific
+Learn. Teach. Get Paid.
+
+### Problem:
+We are disrupting a $500mm industry to address the problem of finding a reliable local tutor.
+Source: https://www.ibisworld.com/industry-trends/specialized-market-research-reports/online-retail/lifestyle-services/online-tutoring-services.html
+
+We want to create the freelancer of tutors application.
+
+Finding an effective tutor can be extremely difficult.  Every school has a unique curriculum that in essence requires the tutor to understand how the school operates, in order to effectively teach the student.
+
+Online tutors outside the school or district rarely are helpful because they don’t understand the specific material being covered.  E.g. Harvard Business School may focus more on management where as Yale may focus more on entrepreneurship best practices.  Therefore a student needs to stay local to truly receive effective tutoring.
+
+We want to address this issue for students and tutors alike by providing a software as a service tutoring platform for the schools of the students and tutors.
+
+Are target market is not students or tutors, but the schools where the tutors and students work.  The technology in public and private schools is generally 10 years behind.  Meaning students are forced to work with antiquated methods to connect with potential tutors.  We plan to target the schools to alleviate this pain point.
+
+###Solution
+We are building a white label tutoring platform to empower local tutors and schools to leverage their existing market of tutors and students.
+
+This software as a service is geared towards schools with aging or lacking software as well as private tutoring services.  We want to empower private businesses and schools with the ability to create their own tutoring services.
+
+Unlike competitors like Club Z!, Kaplan, MindLaunch, and Slyvan, we are leveraging the effectiveness of local tutors, schools, and businesses with the power of our technology to provide better service to their students and tutors.
+
+Tutorific makes money by managing the hosting of the service and creating tiered plans for the usage of each school (e.g. 500 or less users $100 a month).
+
+###
 
 ### Style Guide
 
