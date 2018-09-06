@@ -63,7 +63,7 @@ INSERT INTO Reviews (author,rating,text,createdAt,updatedAt,tutorPostId)
 VALUES ("beatmodeReviews",4,"Decent guy, those lessons were BEAST!",
 CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,1);
 INSERT INTO Reviews (author,rating,text,createdAt,updatedAt,tutorPostId)
-VALUES ("derptwitch.tv",4,"I'm a great gamer but im terrible at the 'Fine Arts' this guy helps quite well.",
+VALUES ("derptwitch.tv",4,"I'm a great gamer but im terrible at the 'Fine Arts' this guy helps quite a bit.",
 CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,1);
 
 INSERT INTO Reviews (author,rating,text,createdAt,updatedAt,tutorPostId)
